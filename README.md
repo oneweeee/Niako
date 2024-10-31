@@ -7,7 +7,7 @@
 ![screen](https://raw.githubusercontent.com/oneweeee/Niako/refs/heads/main/assets/ScamToXonax2.jpg)
 ![screen](https://raw.githubusercontent.com/oneweeee/Niako/refs/heads/main/assets/ScamToXonax3.jpg)
 Конец истории: Xonax забанен и кинут в чс, нищий итс ему 20.000руб не вернул.
-Также он должен 12.000руб за новый вебсайт Niako дизайнеру @ne_arlen (лучший дизайнер интерфейсов <3).
+Также он должен 10.000руб за новый вебсайт Niako дизайнеру @ne_arlen (лучший дизайнер интерфейсов <3).
 ![screen](https://raw.githubusercontent.com/oneweeee/Niako/refs/heads/main/assets/ScamToArlenrww1.jpg)
 Конец истории: Забрал роли на саппорт сервере бота, после чего тотальный игнор и черный список.
 
@@ -15,7 +15,7 @@
 ![screen](https://raw.githubusercontent.com/oneweeee/Niako/refs/heads/main/assets/ScamToArlenrww1.jpg)
 ![screen](https://raw.githubusercontent.com/oneweeee/Niako/refs/heads/main/assets/ScamToArlenrww2.jpg)
 
-Также он несколько раз многим людям затягивал отдачу денег в плоть до черного списка. Например занял у небезизвестного человека aqua 1.000 рублей, отдал только через год под давлением oneheka. Ещё та же история выше со скамом вплоть до чс.
+Также он несколько раз многим людям затягивал отдачу денег в плоть до черного списка. Например занял у небезизвестного человека aqua 1.500 рублей, отдал только через год под давлением oneheka. Ещё та же история выше со скамом вплоть до чс.
 ![screen](https://raw.githubusercontent.com/oneweeee/Niako/refs/heads/main/assets/ScamToAqua1.png)
 ![screen](https://raw.githubusercontent.com/oneweeee/Niako/refs/heads/main/assets/ScamToAqua2.png)
 ![screen](https://raw.githubusercontent.com/oneweeee/Niako/refs/heads/main/assets/ScamToAqua3.png)
