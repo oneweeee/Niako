@@ -2,7 +2,7 @@
 Итак, хотим прассказать немного о нынешнем владельцем Niako [oneits](https://github.com/oneitss) (Discord ID: [947586139911491635](https://discord.com/users/947586139911491635)). 
 
 # Скам, должник, нищий
-Данный человек является напрямую скаммером. При покупке бота Niako он занимла деньги у своего "друга", которого непосредественно кинул, а также не отдал 5.000руб уже с другого "друга".
+Данный человек является напрямую скаммером. При покупке бота Niako он занимал деньги у своего "друга", которого непосредественно кинул, а также не отдал 5.000руб уже с другого "друга".
 ![screen](https://raw.githubusercontent.com/oneweeee/Niako/refs/heads/main/assets/ScamToXonax1.jpg)
 ![screen](https://raw.githubusercontent.com/oneweeee/Niako/refs/heads/main/assets/ScamToXonax2.jpg)
 ![screen](https://raw.githubusercontent.com/oneweeee/Niako/refs/heads/main/assets/ScamToXonax3.jpg)
