@@ -8,10 +8,10 @@
 ![screen](https://raw.githubusercontent.com/oneweeee/Niako/refs/heads/main/assets/ScamToXonax3.jpg)
 Конец истории: Xonax забанен и кинут в чс, нищий итс ему 20.000руб не вернул.
 Также он должен 10.000руб за новый вебсайт Niako дизайнеру @ne_arlen (лучший дизайнер интерфейсов <3). Данные средста он был должен oneheka за 3 модуля, которые были готовы, а именно: аудит, трекер приглашений, музыка.
-![screen](https://raw.githubusercontent.com/oneweeee/Niako/refs/heads/main/assets/ScamToArlenrww1.jpg)
 Конец истории: Забрал роли на саппорт сервере бота, после чего тотальный игнор и черный список.
 
 И это только последние нам помнящиеся. За 2 года общения он так долго не возвращал деньги, так ещё и нагло врал (итс просто нищий броук). Вот несколько скринов:
+![screen](https://raw.githubusercontent.com/oneweeee/Niako/refs/heads/main/assets/ScamToArlenrww1.jpg)
 ![screen](https://raw.githubusercontent.com/oneweeee/Niako/refs/heads/main/assets/ScamToArlenrww2.jpg)
 
 Также он несколько раз многим людям затягивал отдачу денег в плоть до черного списка. Например занял у небезизвестного человека aqua 1.500 рублей, отдал только через год под давлением oneheka. Ещё та же история выше со скамом вплоть до чс.
