@@ -7,7 +7,7 @@
 ![screen](https://raw.githubusercontent.com/oneweeee/Niako/refs/heads/main/assets/ScamToXonax2.jpg)
 ![screen](https://raw.githubusercontent.com/oneweeee/Niako/refs/heads/main/assets/ScamToXonax3.jpg)
 Конец истории: Xonax забанен и кинут в чс, нищий итс ему 20.000руб не вернул.
-Также он должен 10.000руб за новый вебсайт Niako дизайнеру @ne_arlen (лучший дизайнер интерфейсов <3).
+Также он должен 10.000руб за новый вебсайт Niako дизайнеру @ne_arlen (лучший дизайнер интерфейсов <3). Данные средста он был должен oneheka за 3 модуля, которые были готовы, а именно: аудит, трекер приглашений, музыка.
 ![screen](https://raw.githubusercontent.com/oneweeee/Niako/refs/heads/main/assets/ScamToArlenrww1.jpg)
 Конец истории: Забрал роли на саппорт сервере бота, после чего тотальный игнор и черный список.
 
