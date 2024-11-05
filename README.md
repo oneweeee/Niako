@@ -1,4 +1,4 @@
-# NiakoBot + Api
+# NiakoBot + NiakoApi + WindBot/Api + WindWeb
 Итак, хотим прассказать немного о нынешнем владельцем [Niako](https://niako.life/) [oneits](https://github.com/oneitss) (Discord ID: [947586139911491635](https://discord.com/users/947586139911491635)). 
 
 # Скам, должник, нищий
