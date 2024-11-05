@@ -1,0 +1,50 @@
+@import '../../assets/scss/Mixins.scss';
+
+.section {
+    width: 645px;
+    margin-top: 120px;
+    animation: open .75s .05s backwards;
+    @include flex(column, flex-start, var(--g-spacing-9), flex-start);
+
+    .content {
+        @include flex(column, flex-start, var(--g-spacing-4), flex-start);
+
+        .title {
+            text-align: start;
+            @include text(40, 600, var(--text-primary), 48px)
+        }
+
+        .description {
+            @include text(17, 400, var(--g-color-text-complementary), 24px)
+        }
+    }
+
+    .buttons {
+        @include flex(row, flex-start, var(--g-spacing-4), flex-start)
+    }
+}
+
+@keyframes open {
+    from {
+        opacity: 0;
+        transform: translateX(-1.2vw);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@media screen and (max-width: 668px) {
+    .section {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .section .buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+}

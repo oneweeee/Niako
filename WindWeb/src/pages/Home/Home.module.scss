@@ -1,0 +1,14 @@
+@import '../../assets/scss/Mixins.scss';
+
+.app {
+    width: 1120px;
+    margin: 0 auto;
+    @include flex(column, flex-start, 100px, flex-start);
+}
+
+@media screen and (max-width: 1134px) {
+    .app {
+        @include padding-width(var(--g-spacing-3), 100%);
+        padding: 0 var(--g-spacing-3);
+    }
+}

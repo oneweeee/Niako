@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    outline: 0;
+    text-decoration: none;
+    font-family: 'Manrope';
+    transition: background .1s;
+
+    --g-color-private-niako-50: rgba(10,132,255,0.1);
+    --g-color-private-niako-100: rgba(10,132,255,0.15);
+    --g-color-private-niako-150: rgba(10,132,255,0.2);
+    --g-color-private-niako-200: rgba(10,132,255,0.3);
+    --g-color-private-niako-250: rgba(10,132,255,0.4);
+    --g-color-private-niako-300: rgba(10,132,255,0.5);
+    --g-color-private-niako-350: rgba(10,132,255,0.6);
+    --g-color-private-niako-400: rgba(10,132,255,0.7);
+    --g-color-private-niako-450: rgba(10,132,255,0.8);
+    --g-color-private-niako-500: rgba(10,132,255,0.9);
+
+    --g-color-private-niako-50-solid: rgb(1,13,26);
+    --g-color-private-niako-100-solid: rgb(2,20,38);
+    --g-color-private-niako-150-solid: rgb(2,26,51);
+    --g-color-private-niako-200-solid: rgb(3,40,77);
+    --g-color-private-niako-250-solid: rgb(4,53,102);
+    --g-color-private-niako-300-solid: rgb(5,66,128);
+    --g-color-private-niako-350-solid: rgb(6,79,153);
+    --g-color-private-niako-400-solid: rgb(7,92,179);
+    --g-color-private-niako-450-solid: rgb(8,106,204);
+    --g-color-private-niako-500-solid: rgb(9,119,230);
+    --g-color-private-niako-550-solid: rgb(10,132,255);
+    --g-color-private-niako-600-solid: rgb(34,144,255);
+    --g-color-private-niako-650-solid: rgb(59,157,255);
+    --g-color-private-niako-700-solid: rgb(84,169,255);
+    --g-color-private-niako-750-solid: rgb(108,181,255);
+    --g-color-private-niako-800-solid: rgb(133,194,255);
+    --g-color-private-niako-850-solid: rgb(157,206,255);
+    --g-color-private-niako-900-solid: rgb(182,218,255);
+    --g-color-private-niako-950-solid: rgb(206,230,255);
+    --g-color-private-niako-1000-solid: rgb(218,237,255);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.g-root {
+    --g-font-family-sans: 'Mulish';
+
+    --g-text-header-font-weight: 600;
+    --g-text-subheader-font-weight: 600;
+    --g-text-display-font-weight: 600;
+    --g-text-accent-font-weight: 600;
+
+    --g-color-base-brand: var(--g-color-private-niako-500);
+    --g-color-base-brand-hover: var(--g-color-private-niako-700-solid);
+    --g-color-base-selection: var(--g-color-private-niako-250);
+    --g-color-base-selection-hover: var(--g-color-private-niako-400);
+    --g-color-line-brand: var(--g-color-private-niako-500);
+    --g-color-text-brand: var(--g-color-private-niako-500);
+    --g-color-text-brand-contrast: rgb(255, 255 ,255);
+    --g-color-text-link: var(--g-color-private-niako-500);
+    --g-color-text-brand-heavy: var(--g-color-private-niako-700-solid);
+    --g-color-text-link-hover: var(--g-color-private-niako-350-solid);
+}
+
+.yc-root_theme_dark-hc {
+    --g-color-base-background: rgba(10, 12, 15, 1);
+    --g-color-base-float: rgb(15, 18, 23);
+}
+
+/*.g-root_theme_light-hc {
+    --g-color-base-brand: #8990f2;
+    --g-color-base-brand-hover: #7f85db;
+    --g-color-base-selection: #f0f1fe;
+    --g-color-base-selection-hover: #e1e3fe;
+    --g-color-line-brand: #8990f2;
+    --g-color-text-brand: #6b6faf;
+    --g-color-text-link: #6b6faf;
+    --g-color-text-link-hover: #585a84;
+}
+
+.g-root_theme_dark-hc {
+    --g-color-base-brand: #8b90ef;
+    --g-color-base-brand-hover: #7c82ed;
+    --g-color-base-selection: #383a61;
+    --g-color-base-selection-hover: #3c4089;
+    --g-color-line-brand: #8b90ef;
+    --g-color-text-brand: #a7abf3;
+    --g-color-text-link: #a7abf3;
+    --g-color-text-link-hover: #c4c7f7;
+}*/
+
+*::-webkit-scrollbar {
+    width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--g-color-base-background);
+    border: solid 3px rgba(14, 12, 21, 1);
+    border-radius: 12px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,.2);
+    border: solid 3px rgba(14, 12, 21, 1);
+    border-radius: 12px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: rgba(255,255,255,.3);
+}

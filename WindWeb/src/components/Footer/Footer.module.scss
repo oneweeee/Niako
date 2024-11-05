@@ -1,0 +1,72 @@
+@import '../../assets/scss/Mixins.scss';
+
+.footer {
+    background: var(--g-color-base-background);
+    border-top: 1px solid var(--g-color-line-generic);
+    @include padding-width(var(--g-spacing-3), 1120px);
+    @include flex(column, flex-start, var(--g-spacing-9), flex-start);
+    padding: var(--g-spacing-9) var(--g-spacing-3) var(--g-spacing-0) var(--g-spacing-3);
+    
+    .top {
+        align-self: stretch;
+        @include flex(row, flex-start, var(--g-spacing-0), space-between);
+
+        .links {
+            flex: 1 0 0;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            @include flex(row, flex-start, var(--g-spacing-9), flex-start);
+
+            .group {
+                @include flex(column, flex-start, var(--g-spacing-4), flex-start);
+
+                .title {
+                    @include text(var(--g-text-subheader-1-font-size), 600, var(--text-primary), var(--g-text-subheader-1-line-height));
+                }
+
+                .childs {
+                    @include flex(column, flex-start, var(--g-spacing-3), flex-start);
+
+                    .title {
+                        width: 100%;
+                        text-decoration: none;
+
+                        span { display: block; width: 100%; }
+                    }
+                }
+            }
+        }
+    }
+
+    .bottom {
+        padding: var(--g-spacing-5) var(--g-spacing-0);
+        align-content: center;
+        align-self: stretch;
+        flex-wrap: wrap;
+        @include flex(row, center, var(--g-spacing-0), space-between);
+
+        .text {
+            @include text(var(--g-text-caption-2-font-size), 400, var(--g-color-text-secondary), 24px)
+        }
+    }
+}
+
+.absolute {
+    z-index: 1;
+    bottom: 0px;
+    transform: translateY(0%);
+    position: absolute;
+}
+
+@media screen and (max-width: 1134px) {
+    .footer {
+        @include padding-width(var(--g-spacing-3), 100%);
+        padding: var(--g-spacing-9) var(--g-spacing-3) var(--g-spacing-0) var(--g-spacing-3);
+    }
+    
+    .absolute {
+        left: 0;
+        @include padding-width(calc(var(--g-spacing-3) * 2.5), 100vw);
+        padding: var(--g-spacing-9) var(--g-spacing-3) var(--g-spacing-0) var(--g-spacing-3);
+    }
+}

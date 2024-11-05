@@ -1,0 +1,36 @@
+import { ButtonInteraction, Locale } from "discord.js";
+import BaseInteraction from "#base/BaseInteraction";
+import WindClient from "#client";
+
+export default new BaseInteraction(
+    { name: 'seekForward' },
+    async (client: WindClient, button: ButtonInteraction<'cached'>, locale: Locale) => {
+        const me = await button.guild.members.fetchMe().catch(() => null)
+        if(!me || !me.voice?.channelId) {
+            return button.reply({ content: `${button.user.toString()}, меня нету в голосовом канале с вами`, ephemeral: true })
+        }
+
+        if(!button.member.voice?.channelId) {
+            return button.reply({ content: `${button.user.toString()}, что-бы послушать музыку зайдите в голосовой канал <#${me.voice.channelId}>`, ephemeral: true })
+        }
+
+        if(me.voice.channelId !== button.member.voice.channelId) {
+            return button.reply({ content: `${button.user.toString()}, вы не находитесь со мной в голосовом канале, на данный момент я нахожусь в голосовом канале <#${me.voice.channelId}>`, ephemeral: true })
+        }
+
+        const queue = client.player.getQueue(button.guildId)
+        if(!queue || !queue.tracks.length) {
+            return button.reply({ content: `${button.user.toString()}, пустая очередь`, ephemeral: true })
+        }
+
+        const status = (((queue.tracks[0].startPlaying || 0) + queue.tracks[0].info.length ) - Date.now()) > 10000
+        queue.tracks[0].startPlaying = (status ? (queue.tracks[0].startPlaying - 10000) : Date.now()-1000)
+        queue.player.seekTo(status ? (Date.now() - queue.tracks[0].startPlaying) + 10000 : queue.tracks[0].info.length-1000)
+
+        return button.update({
+            embeds: [
+                client.storage.embeds.manageSeek(queue, client.db.guilds.getColor(button.guild.id), button.locale)
+            ]
+        })
+    }
+)

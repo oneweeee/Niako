@@ -1,0 +1,76 @@
+@import '../../assets/scss/Mixins.scss';
+
+.cookie {
+    position: fixed;
+    right: 32px;
+    bottom: 32px;
+    animation: open .75s .05s backwards;
+
+    --g-color-base-info-light: var(--g-color-private-blue-400-solid);
+    --g-color-text-info: var(--g-color-text);
+}
+
+.onClose {
+    animation: close .75s .05s forwards;
+}
+
+@keyframes open {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes close {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+}
+
+@keyframes mobileOpen {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes mobileClose {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .cookie {
+        bottom: 0;
+        right: 0;
+
+        animation: mobileOpen .75s .05s backwards;
+    }
+    
+    .onClose {
+        animation: mobileClose .75s .05s forwards;
+    }
+}

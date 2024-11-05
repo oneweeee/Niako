@@ -1,0 +1,12 @@
+@import '../../assets/scss/Mixins.scss';
+
+.section {
+    width: 100%;
+    @include flex(column, flex-start, 100px, flex-start);
+}
+
+@media screen and (max-width: 888px) {
+    .section {
+        gap: 52px;
+    }
+}

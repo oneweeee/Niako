@@ -1,0 +1,91 @@
+@import '../../assets/scss/Mixins.scss';
+
+.plugin {
+    width: 100%;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(1.2vw);
+    @include flex(row, center, var(--g-spacing-0), space-between);
+
+    .video {
+        width: 50%;
+        border-radius: var(--g-spacing-4);
+    }
+    
+    .info {
+        width: 100%;
+        margin-left: var(--g-spacing-10);
+        @include flex(column, flex-start, var(--g-spacing-3), flex-start);
+
+        .title {
+            @include flex(row, center, var(--g-spacing-1));
+            
+            .icon {
+                color: var(--g-color-text-brand);
+            }
+
+            .text {
+                @include text(32, 600, var(--text-primary), 36px)
+            }
+        }
+
+        .description {
+            @include text(15, 400, var(--g-color-text-complementary), 20px)
+        }
+
+        .contents {
+            @include flex(column, flex-start, var(--g-spacing-2), flex-start);
+
+            .container {
+                @include flex(row, flex-start, var(--g-spacing-1), flex-start);
+
+                .icon {
+                    color: var(--g-color-text-brand)
+                }
+
+                .content {
+                    max-width: 90%;
+                    @include flex(column, flex-start, var(--g-spacing-1), flex-start);
+
+                    .title {
+                        @include text(20, 600, var(--text-primary), 24px)
+                    }
+
+                    .description {
+                        @include text(15, 400, var(--g-color-text-complementary), 20px)
+                    }
+                }
+            }
+        }
+    }
+}
+
+.pluginShow {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: opacity 2s;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+
+    .info {
+        margin-left: 0px;
+        margin-right: var(--g-spacing-10);
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .plugin {
+        flex-direction: column;
+        gap: var(--g-spacing-2);
+
+        .video {
+            width: 100%
+        }
+
+        .info {
+            margin: 0;
+        }
+    }
+}

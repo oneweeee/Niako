@@ -1,0 +1,48 @@
+@import '../../assets/scss/Mixins.scss';
+
+.card {
+    user-select: none;
+    transform: none;
+    -webkit-transform: none;
+    padding: var(--g-spacing-3);
+    @include flex(column, flex-start, var(--g-spacing-3), flex-start);
+
+    .container {
+        width: 236px;
+        @include flex(row, center, var(--g-spacing-4), flex-start);
+
+        .icon {
+            @include circle();
+            @include box(64px);
+        }
+
+        .info {
+            @include flex(column, flex-start, var(--g-spacing-1), center);
+
+            .name {
+                @include text-hidden();
+                @include text(17, 600, var(--text-primary), 24px)
+            }
+
+            .members {
+                @include flex(row, center, var(--g-spacing-1), flex-start);
+
+                .text {
+                    @include text(15, 400, var(--g-color-text-complementary), 20px)
+                }
+
+                .icon {
+                    color: var(--g-color-text-complementary);
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 563px) {
+    .card {
+        width: 100%;
+    }
+}

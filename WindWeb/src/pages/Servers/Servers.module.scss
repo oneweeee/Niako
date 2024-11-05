@@ -1,0 +1,32 @@
+@import '../../assets/scss/Mixins.scss';
+
+.app {
+    width: 1120px;
+    margin: 0 auto;
+    min-height: 100vh;
+    @include flex(column, flex-start, var(--g-spacing-9), flex-start);
+
+    .content {
+        align-self: stretch;
+        margin-top: 128px;
+        @include flex(column, flex-start, var(--g-spacing-9), flex-start);
+
+        .lists {
+            align-self: stretch;
+            @include flex(column, flex-start, var(--g-spacing-6), flex-start);
+
+            .text {
+                align-self: stretch;
+                text-align: center;
+                @include text(32, 600, var(--text-primary), 40px)    
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1134px) {
+    .app {
+        @include padding-width(var(--g-spacing-3), 100%);
+        padding: 0 var(--g-spacing-3);
+    }
+}

@@ -1,0 +1,6 @@
+@import '../../assets/scss/Mixins.scss';
+
+.section {
+    width: 100%;
+    @include flex(row, center, var(--g-spacing-9), flex-start);
+}

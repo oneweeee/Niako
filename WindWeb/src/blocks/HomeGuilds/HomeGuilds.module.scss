@@ -1,0 +1,84 @@
+@import '../../assets/scss/Mixins.scss';
+
+.section {
+    width: 100%;
+    @include flex(column, center, var(--g-spacing-7), flex-start);
+    
+    .title {
+        text-align: center;
+        @include text(32, 600, var(--text-primary), 40px)
+    }
+
+    .brand {
+        color: var(--g-color-text-brand);
+    }
+
+    .guilds {
+        width: 1096px;
+        flex-wrap: wrap;
+        overflow: hidden;
+        @include flex(column, center, var(--g-spacing-4), flex-start);
+
+        .rows {
+            width: 100%;
+            height: 90px;
+            @include flex(row, center, var(--g-spacing-4), flex-start);
+
+            .row {
+                flex: 0 0 auto;
+                @include flex(row, center, var(--g-spacing-4), flex-start);
+            }
+
+            .left, .right {
+                animation: scroll 30s linear 0s infinite;
+                -webkit-animation: scroll 30s linear 0s infinite;
+                animation-play-state: running;
+                animation-delay: 0s;
+            }
+
+            .left {
+                animation-direction: normal;
+            }
+
+            .right {
+                animation-direction: reverse;
+            }
+        }
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(calc(-100% - var(--g-spacing-4)));
+    }
+}
+
+@media screen and (max-width: 1122px) {
+    .section .guilds {
+        justify-content: center;
+        width: 100%;
+
+        .safariRows {
+            justify-content: center;
+
+            .safari {
+                width: 100%;
+                justify-content: center
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 842px) {
+    .section .guilds .safariRows {
+        height: auto;
+
+        .safari {
+            flex-wrap: wrap;
+        }
+    }
+}

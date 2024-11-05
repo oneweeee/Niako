@@ -1,0 +1,476 @@
+{
+	"main": {
+		"module": {
+			"off": "Switch off?",
+			"on": "Switch on?"
+		},
+
+		"embeds": {
+			"click_on": "To **agree**, click on",
+			"click_off": "for **refusal**",
+			"page": "Page",
+			"loading": "loading"
+		},
+
+		"time": {
+			"ms": "ms",
+			"m": "m",
+			"s": "s"
+		},
+
+		"developer_commands": {
+			"guilds": {
+				"total_servers": "Total servers",
+				"total_user": "Total users"
+			}
+		}
+	},
+
+
+	"autorole": {
+		"auto_role": "Auto-Roles server",
+		"select": "Select the roles **you need for** issuance",
+		"active_roles": "Active roles for issuance"
+	},
+
+
+	"buttons": {
+		"invite": "Invite to your server",
+		"leave": "Come back",
+		"help": "Get help",
+		"back_protection": "Return to protection selection",
+		"reset_channel": "Reset channel",
+		"reset_role": "Reset role",
+		"add_whitelist": "Add to whitelist",
+		"remove_whitelist": "Remove from white list",
+		"remove_quarantine": "Remove quarantine and return roles",
+		"return_role": "The roles were returned"
+	},
+
+	
+	"selects": {
+		"placeholders": {
+			"change": "Choose what you want to change...",
+			"apply": "Select what you want to apply...",
+			"choose_channel": "Choose which channel to use...",
+			"do": "Choose what you want to do...",
+			"choose_role": "Choose which role to use...",
+			"select_user": "Select user...",
+			"change_group": "Select to change group...",
+			"change_role_group": "Select group role...",
+			"change_action": "Select the action you want to change...",
+			"select_action": "Select violation action...",
+			"select_role": "Select the roles you need...",
+			"select_avatar": "Choose which avatar or banner you want to view...",
+			"select_channel": "Select the desired channel...",
+			"select_type": "Select the type to configure..."
+		},
+
+		"labels": {
+			"visits": "Number of people joining",
+			"time": "Amount of time",
+			"ban_punishment": "Ban a participant when joining",
+			"kick_punishment": "Kick a participant when joining",
+			"punishment": "Punishment",
+			"raid_audit": "Raid audit channel",
+			"anticrash_audit": "Audit channel",
+			"ban_role": "Ban role",
+			"role": "Roles",
+			"create_group": "To create a group",
+			"delete_group": "Delete group",
+			"auto_settings": "Automatic settings",
+			"reset_roles": "Reset all roles"
+		},
+
+		"descriptions": {
+			"join_punishment": "Punishments for joining such and such a number of users",
+			"time_punishment": "Punishment for such and such time",
+			"punishment": "What will be issued in case of violation",
+			"notification": "Where will notifications be sent",
+			"change": "Add, change or show group information",
+			"add_remove": "Add or remove a user from the white list",
+			"quarantine": "The role is issued under the punishment \"Quarantine\"",
+			"affects_role": "Affects user with a role"
+		}
+	},
+
+
+	"commands": {
+		"help": {
+			"category": {
+				"information": "Main",
+				"moderation": "Moderation",
+				"settings": "Utils",
+				"music": "Music"
+			}
+		},
+
+
+		"ping": {
+			"shards": "Shards",
+			"delay": "Delay",
+			"processing": "Command Processing",
+			"db": "Database"
+		},
+
+
+		"info": {
+			"hello": "Hello! Here’s all the information about me",
+			"located": "located on the",
+			"toCluster": "cluster",
+			"toShard": "shard",
+			"cluster": "Cluster",
+			"ping": "Ping",
+			"servers": "Servers",
+			"users": "Users",
+			"developers": "Developers",
+			"build": "Build on",
+			"statistic": "Statistics",
+			"system": "System",
+			"platform": "Platform",
+			"uptime": "Uptime"
+		},
+
+
+		"avatar": {
+			"profile": "Profile avatar",
+			"server": "Server avatar",
+			"banner": "Profile banner",
+			"on": "on",
+			"no": "**no** banner"
+		},
+
+
+		"autorole": {
+			"no_rights": "Insufficient rights to use this command",
+			"no_rights_bot": "I don’t have enough rights to use this command",
+			"auto_role": "Auto-Roles server"
+		},
+
+
+		"audit": {
+			"no_rights": "Insufficient rights to use this command"
+		},
+
+
+		"backup": {
+			"no_rights": "Insufficient rights to use this command",
+			"name": "Name",
+			"create_copy": "Creating a server copy",
+			"delete_copy": "Deleting a server copy",
+			"failed_find_copy": "I **couldn’t** find the **copy** of the server you selected**",
+			"failed_find_date": "I **cannot** find **data** about this copy",
+			"you_sure_delete_copy": "Are you **sure** you want to **delete** the copy",
+			"info": "Information the copy",
+			"name_server": "Server name",
+			"image": "Images",
+			"icon": "Icon",
+			"banner": "Banner",
+			"invite": "Invite",
+			"roles": "Roles",
+			"chhanels": "Channels",
+			"no_restore": "There is no way to get the data back",
+			"deleted": "You **deleted** the copy",
+			"loading_copy_load": "Downloading a copy of the server",
+			"you_sure_load_copy": "Are you **sure** you want to **download** a copy",
+			"make_sure": "Make sure that",
+			"permisson": "has \"**Administrator**\" rights",
+			"error_load": "We are **not** responsible if the **template** loaded with errors",
+			"failed_load": "We **failed** to **download** a copy",
+			"success_load": "A copy is **uploaded** on the server",
+			"errors": "Errors",
+
+			"loades": {
+				"title": "Loading Data",
+				"description": "Copies are being downloaded to the server..."
+			}
+		},
+
+
+		"serverinfo": {
+			"info": "Information server",
+			"owner": "Owner",
+			"image": "Image",
+			"icon": "Icon",
+			"banner": "Banner",
+			"splash": "Splash",
+			"verify": "Verification level",
+			"description": "Description",
+			"missings": "Missing",
+			"users": "Users",
+			"total": "Total",
+			"people": "People",
+			"bots": "Bots",
+			"channels": "Channels",
+			"texts": "Texts",
+			"voices": "Voices",
+			"afk": "Afk",
+			"channel": "Channel",
+			"timeout": "Timeout",
+			"other": "Other",
+			"roles": "Roles",
+			"emoji": "Emoji",
+			"boosts": "Boosts",
+			"level": "Level",
+			"boosts_total": "Boosts",
+			"date_creation": "Date of creation",
+			"segments": "Segment",
+			"verify_low": "Low",
+			"verify_medium": "Medium",
+			"verify_high": "High",
+			"verify_very_high": "Very high"
+		},
+
+
+		"music": {
+			"contents": {
+				"error_use": "To use this command, you must be in a voice channel",
+				"no_fiend": "Could not find the track for your request",
+				"leave_voice": "Leave from voice channel",
+				"server_queue": "Empty server queue",
+				"no_track_queue": "I left the channel because there were no tracks left in the queue"
+			}
+		},
+
+
+		"antinuke": {
+			"configuration": "Configuration",
+			"main_info": "Basic information",
+			"getSystemConfig": "Here you **can** view **system configuration**",
+			"main": "Main",
+			"timeoutEnd": "Time is **over**",
+			"no_rights": "Insufficient rights to use this command",
+			"delete_group": "Delete a group",
+			"nobody": "Nobody",
+			"channelNotification": "Notification channel",
+			"endTitle": "Setting up server protection",
+			
+			"module": {
+				"on": "on",
+				"off": "off"
+			},
+
+			"antiraid": {
+				"antiraidSystem": "Anti-raid system",
+				"antiraid": "Anti-raid",
+				"visits": "joined",
+				"time": "time",
+				"punishment": "Punishment measure",
+
+				"pretext": {
+					"on": "on"
+				}
+			},
+
+			"anticrash": {
+				"anticrashSystem": "Anti-crash system",
+				"whitelist_antinuke": "Anti-crash — White list",
+				"anticrash": "Anti-crash",
+				"anticrash_group": "Anti-crash – Groups",
+				"role_quarantine": "The role of quarantine",
+				"roles": "roles",
+				"groups": "Groups",
+				"server_group": "Here you **can** see **server groups**",
+				"unknownGroup": "Unknown group",
+				"empty": "Empty",
+				"whitelist": "White list",
+				"error_whitelist": "Only the server owner can add to the white sheet",
+
+				"punishments": {
+					"ban": "Ban",
+					"kick": "Kick",
+					"quarantine": "Quarantine",
+					"warn": "Warn",
+					"warn_total": "Number of warnings",
+					"nothing": "Nothing"
+				},
+
+				"events": {
+					"bot_add": "Adding a bot",
+					"channel_create": "Creating a channel",
+					"channel_delete": "Deleting a channel",
+					"channel_edit": "Changing channel",
+					"emoji_edit": "Changing Emoji",
+					"banner_edit": "Changing the server banner",
+					"icon_edit": "Changing the server icon",
+					"guild_edit_name": "Changing the server name",
+					"link_edit": "Changing the server link",
+					"ban": "Member ban",
+					"kick": "Member kick",
+					"unban": "Unbaning a member",
+					"role_add": "Adding a role",
+					"role_add_admin": "Adding a banned role",
+					"remove_role": "Removing a role",
+					"add_role_perms": "Adding denied rights to a role",
+					"edit_role": "Role change",
+					"create_role": "Creating a role",
+					"delete_role": "Deleting a role",
+					"create_admin_role": "Creating a role with denied rights",
+					"nickname": "Nickname change",
+					"timeout_add": "Issuing a participant timeout",
+					"mention": "Mention @everyone & @here",
+					"create_webhook": "Creating a webhook"
+				}
+			},
+
+			"mainMenu": {
+				"description": "Choose what you **want** to change?",
+				"fields": {
+					"raid": "Defense against attack",
+					"crash": "Demolition protection"
+				},
+				"menu": "Select what you want to edit..."
+			},
+
+			"logs": {
+				"antiraid_on": "Enabling anti-raid",
+				"antiraid_off": "Disabling anti-raid",
+				"antiraid": "Anti-raid system logs",
+				"anticrash_on": "Enabling anti crash",
+				"anticrash_off": "Disabling anti crash",
+				"anticrash": "Anti-crash system logs",
+				"user": "User",
+				"added": "Added",
+				"remove": "Removed",
+				"channel": "Channel",
+				"action": "Counteraction",
+				"banned": "Banned",
+				"role": "Role",
+				"bot": "Bot",
+				"emoji": "Emoji",
+				"warn": "Warnings",
+				"old_channel": "Old Channel",
+				"new_channel": "New channel",
+				"off": "Off",
+				"old_role": "Old role",
+				"new_role": "New role",
+				"old_value": "Old value",
+				"new_value": "New value",
+				"edit_notification_channel": "Setting up a notification channel",
+				"reset_notification_channel": "Reset notification channel",
+				"count_edit": "Changing the number of join",
+				"time_join_edit": "Changing the amount of time",
+				"push_edit": "Change of punishment",
+				"whitelist_add": "Adding to whitelist",
+				"whitelist_remove": "Removal from the white list",
+				"reset_role": "Reset role ban",
+				"set_role": "Setting a ban role",
+				"auto_warn": "Automatic issuance of quarantine after 5 warnings",
+				"edit_warn": "Changing the number of warnings"
+			},
+
+			"collectors": {
+				"crash": {
+					"system": "Anti-crash — System",
+					"notification": "Anti-crash — Notification channel",
+					"ban_role": "Anti-crash — The role of a ban",
+					"remove_whitelist": "Anti-crash — Removal from the white list",
+					"add_whitelist": "Anti-crash — Adding to the white list",
+					"change": "Anti-crash — State change",
+					"change_action": "Anti-crash — Changing action",
+					"change_group": "Anti-crash — Editing role group",
+					"create_group": "Anti-crash — Group creation",
+					"delete_group": "Anti-crash — Delete group",
+					"on": "Manual system inclusions",
+					"off": "Manual system shutdown",
+					"reset_channel": "Manual channel removal",
+					"enabled": "You **enabled** the **anti-crash** system",
+					"disabled": "You **disabled** the **anti-crash** system",
+					"reset_ban_role": "You **reset** the ban role",
+					"incorrect_role": "You specified an **incorrect** role",
+					"reset_notification": "You **reset** the **notification** channel crash",
+					"incorrect_channel": "You **should** have used the **text channel**",
+					"set_role": "You have **installed** the role",
+					"as": "as ban",
+					"set_channel": "You have **installed** the channel",
+					"incorrect_user": "You **incorrectly** specified the user",
+					"you_remove": "You **removed**",
+					"whitelist_remove_user": "from the **white list** of the system",
+					"you_add": "You **added**",
+					"whitelist_add_user": "to the **white list** of the system",
+					"you": "You",
+					"edit_group": "Here you **can** edit the group",
+					"you_change": "You **changed** the action",
+					"group_role_create": "You have created a **group** with the role",
+					"you_sure": "Are you **sure** you want to **delete** the group",
+					"auto_settings": "You have applied **auto-configuration** for a role",
+					"deleted_group": "You **deleted** group",
+					"role": "for role",
+					"as_log": "as logged",
+					"reset_role": "Manual role reset",
+					"whitelist_users": "Whitelisted users",
+					"no_whitelist_user": "The user is **not** in the **white** list",
+					"yes_whitelist_user": "The user is **already** on the **white** list",
+					"exist_group": "A group with **this** role already exists",
+					"group": "group",
+					"group_on": "On",
+					"group_off": "Off",
+					"group_name": "Group with name",
+					"no_found": "not found",
+					"select_channel": "Select the **channel** you **want** to use?",
+					"select_role": "Select the **role** you **want** to use?",
+					"select_change": "Choose what you **want** to do?",
+					"remove_user": "Select **user** to **remove** from whitelist",
+					"add_user": "Select **user** to **add** to whitelist",
+					"new_punishment": "Select a new **action** for violation",
+					"new_role_group": "Select **role** for **new** group"
+				},
+
+				"raid": {
+					"system": "Anti-raid — System",
+					"notification": "Anti-raid — Notification channel",
+					"time": "Anti-raid — Amount of time to join",
+					"punishment": "Anti-raid — Punishment",
+					"member": "Anti-raid — Setting the number of participants",
+					"channel": "Manual removal channel",
+					"on": "Manual system inclusions",
+					"off": "Manual system shutdown",
+					"enabled": "You **enabled** the **anti-raid** system",
+					"disabled": "You **disabled** the **anti-raid** system",
+					"reset": "You **reset** the raid **notification** channel",
+					"set_number": "You **must** indicate a **natural** number greater than **1**",
+					"set_time": "You have **set** your accession time",
+					"set_join": "You have **set** the number of joining",
+					"set_channel": "You have **installed** the channel",
+					"applied": "You **applied** intent",
+					"use_channel": "You **should** have used the **text channel**",
+					"at": "at raid",
+					"as": "as logged",
+					"change_number": "Change number of joining",
+					"join": "Number of joining",
+					"example_join": "For example: 5",
+					"example_time": "For example: 7",
+					"change_time": "Change amount of time",
+					"time_join": "Amount of time",
+					"select_punishment": "Select **which** measure do you **want** to apply?",
+					"select_channel": "Select the **channel** you **want** to use?"
+				}
+			}
+		}
+	},
+
+
+	"verificationGuildLevel.0": "Отсутствует",
+	"verificationGuildLevel.1": "Низкий",
+	"verificationGuildLevel.2": "Средний",
+	"verificationGuildLevel.3": "Высокий",
+	"verificationGuildLevel.4": "Очень высокий",
+	"explicitContentFilter.Disabled": "Выключена",
+	"explicitContentFilter.MembersWithoutRoles": "Участники без ролей",
+	"explicitContentFilter.AllMembers": "Все участники",
+	"mfaLevel.None": "Выключена",
+	"mfaLevel.Elevated": "Включена",
+	"nsfwLevel.Default": "Обычный",
+	"nsfwLevel.Explicit": "Откровенный",
+	"nsfwLevel.Safe": "Безопасный",
+	"nsfwLevel.AgeRestricted": "Ограниченный",
+	"defaultAutoArchiveDuration.60": "1ч",
+	"defaultAutoArchiveDuration.1440": "1д",
+	"defaultAutoArchiveDuration.4320": "3д",
+	"defaultAutoArchiveDuration.10080": "7д",
+	"defaultForumLayout.0": "Неизвестно",
+	"defaultForumLayout.1": "Список",
+	"defaultForumLayout.2": "Плитка",
+	"defaultSortOrder.0": "По активности",
+	"defaultSortOrder.1": "По дате"
+}

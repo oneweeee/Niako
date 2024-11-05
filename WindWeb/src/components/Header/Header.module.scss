@@ -1,0 +1,217 @@
+@import '../../assets/scss/Mixins.scss';
+
+.header {
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    background: var(--g-color-base-background);
+    width: 100vw;
+    @include flex(row, center, var(--g-spacing-3), center);
+
+    .content {
+        @include padding-width(var(--g-spacing-3), 1120px);
+        @include flex(row, center, var(--g-spacing-3), space-between);
+
+        .avatar {
+            cursor: pointer;
+            border: 1px solid var(--g-color-line-generic);
+            @include circle();
+            @include box(42px);
+        }
+    }
+
+    .left {
+        @include flex(row, center, var(--g-spacing-2), flex-start);
+
+        .logo {
+            @include box(56px);
+        }
+    }
+
+    .right {
+        @include flex(row, center, var(--g-spacing-3), flex-start);
+
+        .langs {
+            @include padding-width(var(--g-spacing-1), 240px);
+        }
+
+        .avatar {
+            user-select: none;
+            cursor: pointer;
+            border: 1px solid var(--g-color-line-generic);
+            @include circle();
+            @include box(42px);
+        }
+    }
+
+    .drop {
+        animation: openDrop .3s backwards;
+        @include padding-width(var(--g-spacing-3), 100%);
+        @include flex(column, flex-start, var(--g-spacing-4), flex-start);
+
+        .container {
+            width: 100%;
+            @include flex(column, flex-start, var(--g-spacing-half), flex-start);
+            
+            .button {
+                text-align: start;
+            }
+
+            .dropdown, .stroke {
+                width: 100%;
+            }
+
+            .stroke {
+                display: flex;
+                padding: var(--g-spacing-1) 0;
+            }
+        }
+
+        .buttons {
+            width: 100%;
+            align-self: stretch;
+            @include flex(row, flex-start, var(--g-spacing-3), flex-start);
+
+            .dropdown {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.profile {
+    @include padding-width(var(--g-spacing-3), 100%);
+    padding: var(--g-spacing-0) var(--g-spacing-3);
+}
+
+.profile, .dropprofile {
+    .container {
+        width: 100%;
+        height: 80px;
+        border-radius: var(--g-spacing-2);
+        overflow: hidden;
+        @include flex(row, center, var(--g-spacing-0), center);
+
+        .banner {
+            width: 100%;
+        }
+
+        .block {
+            position: absolute;
+            width: calc(100% - 48px);
+            height: 80px;
+            background: rgba(0, 0, 0, 0.30);
+            @include top-boder(var(--g-spacing-2));
+            @include flex(row, center, var(--g-spacing-2), flex-start);
+
+            .avatar {
+                user-select: none;
+                margin-left: 16px;
+                @include circle();
+                @include box(42px);
+            }
+
+            .nicknames {
+                @include flex(column, flex-start, var(--g-spacing-0), flex-start);
+                
+                .global {
+                    @include text(13, 400, rgba(255, 255, 255, 0.85), 16px)
+                }
+
+                .username {
+                    @include text(13, 400, rgba(255, 255, 255, 0.50), 16px)
+                }
+            }
+        }
+    }
+}
+
+.dropprofile {
+    padding: 0;
+    width: 100%;
+
+    .container {
+        @include top-boder(var(--g-spacing-2));
+
+        .banner {
+            width: 328px;
+            //height: 80px;
+        }
+
+        .block {
+            width: 100%;
+        }
+    }
+}
+
+.scrolling .content {
+    border-bottom: 1px solid var(--g-color-line-generic);
+}
+
+.spanIcon {
+    @include box(16px)
+}
+
+.brand {
+    color: var(--g-color-text-brand);
+}
+
+.modal {
+    max-width: 336px;
+    padding: var(--g-spacing-5) var(--g-spacing-7);
+    @include flex(column, flex-start, var(--g-spacing-2), flex-start);
+
+    .cookieTitle {
+        width: 100%;
+        @include text(18, 700, var(--text-primary), 22px);
+        @include flex(row, center, var(--g-spacing-2), space-between);
+    }
+
+    .buttons {
+        width: 100%;
+        @include flex(row, center, var(--g-spacing-2), space-between);
+    }
+}
+
+.animation {
+    animation: openHeader .75s .05s backwards;
+}
+
+@keyframes openHeader {
+    from {
+        opacity: 0;
+        transform: translateY(-1.2vw);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes openDrop {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .header {
+        width: 100%;
+        flex-direction: column;
+        gap: var(--g-spacing-1);
+        @include bottom-boder(var(--g-spacing-2));
+
+        .content {
+            @include padding-width(var(--g-spacing-3), 100%)
+        }
+
+        .drop {
+            box-shadow: 0px 8px 20px 0px var(--g-color-sfx-shadow);
+        }
+    }
+}

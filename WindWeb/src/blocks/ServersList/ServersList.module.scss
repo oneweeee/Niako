@@ -1,0 +1,16 @@
+@import '../../assets/scss/Mixins.scss';
+
+.section {
+    width: 100%;
+    @include flex(column, flex-start, var(--g-spacing-4), flex-start);
+
+    .text {
+        @include text(20, 600, var(--text-primary), 24px);
+    }
+
+    .servers {
+        width: 100%;
+        flex-wrap: wrap;
+        @include flex(row, flex-start, var(--g-spacing-5), flex-start);
+    }
+}
