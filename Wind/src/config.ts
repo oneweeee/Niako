@@ -3,13 +3,13 @@ import { GatewayIntentBits } from "discord.js"
 import { NodeOption } from "shoukaku"
 
 export const internal = {
-    token: 'OTczOTU4NjAxNjE2MDE1Mzgw.GowdrB.dkiTRIE2dWS84q93-UQ203OWCh2h3A8WBKmSSM',
+    token: '',
     mongoUrl: 'mongodb://127.0.0.1:27017/wind',
     prefix: '!'
 }
 
 export const debugInternal = {
-    token: 'MTE2NzczMDcwOTk2NDgwMDA1MA.G1Gy4H.1n1luIf6va2stgQgcH6B1zi-2bPOrXp2lGhQlQ',
+    token: '',
     mongoUrl: 'mongodb+srv://roma2005:roma2005@safety.2djs5xd.mongodb.net/Wind',
     prefix: '.'
 }
