@@ -1,6 +1,6 @@
-import { ClusterManagerOptions } from "discord-hybrid-sharding"
-import { GatewayIntentBits } from "discord.js"
-import { NodeOption } from "shoukaku"
+import { ClusterManagerOptions } from "discord-hybrid-sharding";
+import { GatewayIntentBits } from "discord.js";
+import { NodeOption } from "shoukaku";
 
 export const internal = {
     token: '',
