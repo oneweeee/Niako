@@ -1,0 +1,162 @@
+@import './Mixins.scss';
+
+:root[data-theme="light"] {
+    --background-color: rgba(10, 12, 15, 1);
+    --red-color: rgba(255, 59, 48, 1);
+    --red-color-hover: rgb(254, 72, 63);
+    --text-color: rgba(255, 255, 255, 1);
+    --text-placeholder-color: rgba(255, 255, 255, 0.55);
+    --icon-color: rgba(255, 255, 255, 1);
+    --icon-grey-color: rgba(113, 113, 113, 1);
+    --text-description-color: rgba(185, 185, 185, 1);
+    --text-group-color: rgba(185, 185, 185, 1);
+    --primary-color: rgba(10, 132, 255, 1);
+    --primary-hover-color: rgb(34, 145, 255);
+    --premium-color: rgba(255, 159, 10, 1);
+    --system-green: rgba(52, 199, 89, 1);
+    --system-green-hover: rgba(40, 167, 69, 1);
+    --block-color: rgba(15, 18, 23, 1);
+    --component-color: rgba(22, 25, 31, 1);
+    --component-color-hover: rgba(27, 30, 36, 1);
+    --component-border: rgba(41, 47, 57, 1);
+    --placeholder-color: rgba(115, 115, 115, 1);
+    --hover-background-color: rgba(29, 36, 47, 1);
+    --background-component-color: rgba(6, 8, 11, 1);
+    --scrollbar-color: rgba(129, 134, 142, 1);
+    --scrollbar-hover-color: rgb(108, 111, 115);
+    --modal-background: rgba(1, 1, 1, 0.4);
+    --dropdown-hover-option: rgba(186, 190, 232, 0.05);
+    --animation-time: .2s;
+}
+  
+:root[data-theme="dark"] {
+    --background-color: rgba(10, 12, 15, 1);
+    --red-color: rgba(255, 59, 48, 1);
+    --red-color-hover: rgb(254, 72, 63);
+    --text-color: rgba(255, 255, 255, 1);
+    --text-placeholder-color: rgba(255, 255, 255, 0.55);
+    --icon-color: rgba(255, 255, 255, 1);
+    --icon-grey-color: rgba(113, 113, 113, 1);
+    --text-description-color: rgba(185, 185, 185, 1);
+    --text-group-color: rgba(185, 185, 185, 1);
+    --primary-color: rgba(10, 132, 255, 1);
+    --primary-hover-color: rgb(34, 145, 255);
+    --premium-color: rgba(255, 159, 10, 1);
+    --system-green: rgba(52, 199, 89, 1);
+    --system-green-hover: rgba(40, 167, 69, 1);
+    --block-color: rgba(15, 18, 23, 1);
+    --component-color: rgba(22, 25, 31, 1);
+    --component-color-hover: rgba(27, 30, 36, 1);
+    --component-border: rgba(41, 47, 57, 1);
+    --placeholder-color: rgba(115, 115, 115, 1);
+    --hover-background-color: rgba(29, 36, 47, 1);
+    --background-component-color: rgba(6, 8, 11, 1);
+    --scrollbar-color: rgba(129, 134, 142, 1);
+    --scrollbar-hover-color: rgb(108, 111, 115);
+    --modal-background: rgba(1, 1, 1, 0.4);
+    --dropdown-hover-option: rgba(186, 190, 232, 0.05);
+    --animation-time: .2s;
+}
+
+* {
+    margin: 0;
+    outline: none;
+    text-decoration: none;
+    scrollbar-width: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+.lock-scrollbar {
+    overflow-y: fixed;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+.css-kudwh-MuiTooltip-arrow::before {
+    color: var(--primary-color);
+}
+
+.d-spoiler {
+    background-color: #202225;
+    color: transparent;
+    cursor: pointer;
+}
+  
+.d-spoiler:hover {
+    background-color: rgba(32, 34, 37, 0.8);
+}
+  
+.d-spoiler:active {
+    color: inherit;
+    background-color: hsla(0, 0%, 100%, 0.1);
+}
+
+.d-mention {
+    color: #e3e7f8;
+    background-color: hsla(235, 85.6%, 64.7%, 0.3);
+    font-weight: 500;
+    padding: 0 2px;
+    border-radius: 3px;
+    unicode-bidi: -moz-plaintext;
+    unicode-bidi: plaintext;
+    -webkit-transition: background-color 50ms ease-out, color 50ms ease-out;
+    transition: background-color 50ms ease-out, color 50ms ease-out;
+    cursor: pointer;
+}
+
+.d-mention:hover {
+    color: #fff;
+    background-color: hsl(235, 85.6%, 64.7%);
+}
+
+.d-emoji {
+    margin-bottom: -5px;
+    @include box(22px)
+}
+
+.is-dragging {
+    opacity: 0.4;
+}
+
+::-webkit-scrollbar { width: 0; height: 0; border-radius: 100px; }
+
+::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+}
+
+em-emoji-picker {
+    position: absolute;
+    z-index: 1;
+    top: 48px;
+    left: -16px;
+    --rgb-background: 22, 25, 31;
+    --border-radius: 16px;
+    --rgb-accent: var(--primary-color)
+}
+
+.hljs-number {
+    color: #d3681d
+}
+
+.hljs-literal {
+    color: #e2563b
+}
+
+.hljs-string {
+    color: #0fa878
+}
+
+.hljs-attr {
+    color: #c69129
+}

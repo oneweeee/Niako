@@ -1,0 +1,46 @@
+@import "./Functions.scss";
+
+@mixin text($fs, $fw, $style) {
+    font-family: 'Mulish';
+    font-size: toRem($fs);
+    font-weight: $fw;
+    color: $style;
+}
+
+@mixin flex($dr, $ai, $gp, $jc) {
+    display: flex;
+    flex-direction: $dr;
+    align-items: $ai;
+    gap: $gp;
+    justify-content: $jc;
+}
+
+@mixin box($sz) {
+    width: $sz;
+    height: $sz;
+}
+
+@mixin bottom-boder($sz) {
+    border-radius: 0px 0px $sz $sz;
+}
+
+@mixin top-boder($sz) {
+    border-radius: $sz $sz 0px 0px;
+}
+
+@mixin padding-width($pd, $wd) {
+    padding: $pd;
+    width: calc($wd - ($pd * 2));
+}
+
+@mixin circle() {
+    border-radius: 100%;
+}
+
+@mixin text-hidden() {
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    flex: 1 0 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

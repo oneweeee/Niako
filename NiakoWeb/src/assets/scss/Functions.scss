@@ -1,0 +1,4 @@
+@function toRem($value) {
+    $remValue: calc($value / 16);	
+    @return #{$remValue}rem;
+}
