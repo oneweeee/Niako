@@ -1,0 +1,77 @@
+@import '../../../../../assets/scss/Mixins.scss';
+
+.settings {
+    width: 100%;
+    @include flex(column, flex-start, 16px, flex-start);
+
+    .group {
+        align-self: stretch;
+        @include flex(column, flex-start, 8px, flex-start);
+
+        .title {
+            @include text(16, 400, var(--text-group-color))
+        }
+
+        .setting_group {
+            width: 100%;
+            @include flex(column, flex-start, 16px, flex-start);
+
+            .title {
+                width: 100%;
+                align-self: stretch;
+                @include flex(row, center, 8px, flex-start);
+    
+                .icon {
+                    fill: var(--icon-color)
+                }
+
+                .text {
+                    @include text(16, 700, var(--text-color))
+                }
+            }
+
+            .cell {
+                border-radius: 16px;
+                background-color: var(--block-color);
+                @include padding-width(16px, 100%)
+            }
+
+            .column {
+                @include flex(column, flex-start, 16px, center);
+            }
+
+            .row {
+                @include flex(row, flex-start, 16px, center);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1320px) {
+    .settings {
+        overflow: auto;
+        height: auto;
+        
+        .group {
+            .setting_group {
+                flex-direction: row;
+            }
+
+            .group_download {
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .settings .group .setting_group {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .settings {
+        display: none;
+    }
+}

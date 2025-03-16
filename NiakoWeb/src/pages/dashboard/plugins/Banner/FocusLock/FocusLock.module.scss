@@ -1,0 +1,63 @@
+@import '../../../../../assets/scss/Mixins.scss';
+
+.FocusLock_background {
+    background-color: #0008;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+    z-index: 100000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.FocusLock_modal {
+    width: 600px;
+    height: 550px;
+    background-color: #0F1217;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.FocusLock_canvas {
+    width: 568px;
+    height: 400px;
+    margin-left: 15px;
+}
+
+.FocusLock_title {
+    @include text(24, 600, var(--text-color))
+}
+
+.FocusLock_input {
+    input {
+        width: 580px;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid #0004;
+        background-color: #0004;
+        padding: 0 10px;
+        margin-top: 10px;
+        @include text(16, 600, #000)
+    }
+}
+
+.FocusLock_buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.FocusLock_button {
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    @include text(16, 600, #000)
+}

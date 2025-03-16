@@ -1,0 +1,310 @@
+@import '../../assets/scss/Mixins.scss';
+
+.loading_wrapper {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    @include flex(column, center, 288px, center);
+
+    .logo {
+        position: absolute;
+        border-radius: 100%;
+        animation: rotateAuto infinite 3s;
+        justify-content: center;
+        @include box(148px);
+    }
+
+    .content {
+        width: 1740px;
+        position: absolute;
+        bottom: 40px;
+        @include flex(column, center, 40px, flex-start);
+
+        .facts {
+            width: 100%;
+            text-align: center;
+            @include flex(column, center, 24px, flex-start);
+
+            .title {
+                @include text(32, 700, var(--text-color))
+            }
+
+            .description {
+                @include text(24, 400, #B3B3B3)
+            }
+        }
+
+        .line {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            height: 4px;
+            background-color: var(--block-color);
+            border-radius: 36px;
+        }
+
+        .line::before {
+            content: "";
+            left: -50%;
+            position: absolute;
+            width: 40%;
+            height: 4px;
+            border-radius: 36px;
+            background-color: var(--primary-color);
+            animation: lineAnimation linear infinite 1.5s;
+        }
+    }
+}
+
+.app_wrapper {
+    width: 1764px;
+    margin: auto;
+    @include flex(column, center, 0px, flex-start);
+
+    .plugin {
+        width: 1740px;
+        margin: auto;
+        margin-top: 104px;
+    }
+
+    .errors {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        @include flex(column, flex-end, 8px, flex-start);
+
+        @keyframes moveleft {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(0%);
+            }
+        }
+
+        .snackbar {
+            border-radius: 48px;
+            background: #FF3B30;
+            padding: 8px 16px;
+            animation: moveleft 0.5s linear forwards;
+            @include flex(column, flex-start, 0px, center);
+
+            .content {
+                width: 100%;
+                max-width: 360px;
+                @include flex(row, flex-start, 8px, center);
+
+                .text {
+                    @include text(17, 500, #ffffff)
+                }
+            }
+
+            @keyframes anim {
+                100% {
+                    width: 0;
+                }
+            }
+
+            .line {
+                width: 100%;
+                position: absolute;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 16px;
+                background: #991008;
+                height: 3px;
+                animation: anim 2s linear forwards;
+            }
+        }
+    }
+}
+
+.noserver_content {
+    margin: auto;
+    height: 100vh;
+    justify-content: center;
+    min-width: 306px;
+    margin: auto;
+    @include flex(column, center, 8px, center);
+
+    .title {
+        @include text(32, 700, var(--text-color))
+    }
+
+    .description {
+        @include flex(column, center, 12px, center);
+        
+        .text {
+            text-align: center;
+            @include text(18, 400, var(--text-color));
+
+            .bold {
+                cursor: unset;
+                text-decoration: none;
+                font-weight: 800;
+                color: var(--text-color);
+                margin-left: 2px;
+            }
+
+            .avatar {
+                position: relative;
+                top: 6px;
+                @include box(24px);
+                @include circle();
+            }
+
+            .link {
+                text-decoration: none;
+                color: var(--primary-color);
+                transition: var(--animation-time);
+            }
+
+            .link:hover {
+                color: var(--primary-hover-color);
+                border-bottom: 1px solid var(--primary-hover-color);
+            }
+        }
+
+        .buttons {
+            width: 100%;
+            @include flex(row, center, 12px, center);
+
+            .button { width: 100%; }
+        }
+    }
+}
+
+@media screen and (max-width: 1764px) {
+    .app_wrapper {
+        width: 1320px;
+
+        .plugin {
+            width: calc(1320px - 24px);
+        }
+    }
+
+    .loading_wrapper {
+        .content {
+            width: 1296px;
+        }
+    }
+}
+
+@media screen and (max-width: 1320px) {
+    .app_wrapper {
+        width: 960px;
+
+        .plugin {
+            width: calc(960px - 24px);
+        }
+    }
+
+    .loading_wrapper {
+        .content {
+            width: 936px;
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .app_wrapper {
+        width: 720px;
+
+        .plugin {
+            width: calc(720px - 24px);
+        }
+    }
+
+    .loading_wrapper {
+        .content {
+            width: 696px;
+        }
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .app_wrapper {
+        width: 540px;
+
+        .plugin {
+            width: calc(100% - 16px);
+        }
+    }
+
+    .loading_wrapper {
+        .content {
+            width: 516px;
+        }
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .app_wrapper {
+        width: calc(100% - 32px);
+        padding: 0px 12px;
+        
+        .plugin {
+            width: calc(100% - 16px);
+        }
+    }
+
+    .loading_wrapper {
+        .content {
+            width: calc(100% - 24px);
+        }
+    }
+
+    .noserver_content {
+        @include padding-width(28px, 100vw);
+        gap: 12px;
+
+        .description {
+            width: 100%;
+            gap: 12px;
+
+            .text {
+                flex-direction: column;
+                gap: 0px;
+            }
+
+            .buttons {
+                flex-direction: column;
+
+                .button {
+                    width: calc(100% - 32px);
+                    gap: 4px;
+                }
+            }
+        }
+    }
+}
+
+@keyframes rotateAuto {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(-180deg);
+    }
+
+    0% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes lineAnimation {
+    0% {
+        left: -40%;
+    }
+    
+    50% {
+        left: 20%;
+        width: 80%;
+    }
+
+    100% {
+        left: 100%;
+        width: 100%;
+    }
+}

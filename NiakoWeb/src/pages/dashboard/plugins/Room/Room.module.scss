@@ -1,0 +1,188 @@
+@import '../../../../assets/scss/Mixins.scss';
+
+.plugin_wrapper {
+    width: 100%;
+    @include flex(row, flex-start, 24px, flex-start);
+
+    .discord {
+        @include flex(column, flex-start, 16px, flex-start);
+    }
+
+    .settings {
+        width: 100%;
+        @include flex(column, flex-start, 24px, flex-start);
+
+        .groups {
+            align-self: stretch;
+            @include flex(column, flex-start, 24px, flex-start);
+        }
+    }
+
+    .skeleton {
+        width: calc(100% - 700px);
+    }
+
+    .mobile {
+        position: absolute;
+        
+        .button {
+            z-index: 1;
+            cursor: pointer;
+            position: fixed;
+            left: 12px;
+            bottom: 12px;
+            background: var(--primary-color);
+            border-radius: 100%;
+            padding: 16px;
+            transition: var(--animation-time);
+            @include box(24px);
+
+            .icon {
+                fill: var(--icon-color);
+            }
+        }
+
+        .button:hover {
+            background: var(--primary-hover-color);
+        }
+
+        .message {
+            z-index: 20;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100vw;
+            height: 100vh;
+
+            .background {
+                background: var(--modal-background);
+                width: 100vw;
+                height: 100vh;
+            }
+
+            .closeContainer {
+                animation: closeDropMessage var(--animation-time) linear;
+            }
+            
+            .container {
+                position: fixed;
+                width: 100vw;
+                height: 90vh;
+                top: 20vh;
+                background-color: rgba(54, 57, 62, 1);
+                border-radius: 16px 16px 0px 0px;
+                animation: openDropMessage var(--animation-time) linear;
+                @include flex(column, flex-start, 4px, flex-start);
+
+                .liner {
+                    width: 100%;
+                    padding: 16px 0px;
+                    @include flex(row, center, 0px, center);
+
+                    .line {
+                        cursor: pointer;
+                        width: 20%;
+                        height: 4px;
+                        background: #44484E;
+                        border-radius: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.content {
+    min-width: 306px;
+    height: calc(100vh - 104px);
+    margin: auto;
+    @include flex(column, center, 4px, center);
+
+    .title {
+        @include text(32, 700, var(--text-color))
+    }
+
+    .description {
+        @include flex(column, center, 8px, center);
+        
+        .text {
+            text-align: center;
+            @include text(18, 400, var(--text-color));
+
+            .bold {
+                cursor: unset;
+                text-decoration: none;
+                font-weight: 800;
+                color: var(--text-color);
+            }
+
+            .link {
+                text-decoration: none;
+                color: var(--primary-color);
+                transition: var(--animation-time);
+            }
+
+            .link:hover {
+                color: var(--primary-hover-color);
+                border-bottom: 1px solid var(--primary-hover-color);
+            }
+        }
+    }
+}
+
+.animationDown {
+    animation: closeDropMessage var(--animation-time) ease;
+}
+
+@keyframes openDropMessage {
+    from {
+        opacity: 0;
+        transform: translateY(80vh);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes closeDropMessage {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(80vh);
+    }
+}
+
+@media screen and (max-width: 1320px) {
+    .plugin_wrapper {
+        flex-direction: column;
+
+        .discord {
+            width: 100%;
+            
+            .message {
+                width: calc(100% - 32px);
+            }
+        }
+
+        .skeleton {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .plugin_wrapper {
+        .discord .message {
+            display: none;
+        }
+
+        .settings {
+            width: 100%;
+        }
+    }
+}

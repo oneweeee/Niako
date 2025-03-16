@@ -1,0 +1,49 @@
+@import '../../../../assets/scss/Mixins.scss';
+
+.header {
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    background-color: var(--block-color);
+    //@include bottom-boder(16px);
+    @include padding-width(16px, 100%);
+    @include flex(row, center, 8px, flex-start);
+    border-bottom: 1px solid #1A1E23;
+
+    .title {
+        width: 100%;
+        text-align: center;
+        @include text(32, 700, var(--text-color))
+    }
+}
+
+
+/*@media screen and (max-width: 1764px) {
+    .header {
+        @include padding-width(16px, 1320px);
+    }
+}
+
+@media screen and (max-width: 1320px) {
+    .header {
+        @include padding-width(16px, 936px);
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .header {
+        @include padding-width(16px, 696px);
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .header {
+        @include padding-width(16px, 516px);
+    }
+}*/
+
+@media screen and (max-width: 540px) {
+    .header .title {
+        @include text(24, 700, var(--text-color))
+    }
+}

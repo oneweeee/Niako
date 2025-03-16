@@ -1,0 +1,184 @@
+@import '../../../../../assets/scss/Mixins.scss';
+
+.settings {
+    width: 100%;
+    height: calc(100vh - 260px);
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-color) var(--component-color);
+    @include flex(column, flex-start, 16px, flex-start);
+
+    .containerCell {
+        display: flex;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .cell {
+        align-self: stretch;
+        @include flex(column, flex-start, 8px, flex-start);
+
+        .title {
+            align-self: stretch;
+            @include flex(row, center, 8px, flex-start);
+
+            .text {
+                @include text(16, 400, var(--text-color))
+            }
+        }
+    }
+
+    .buttons {
+        width: 100%;
+        @include flex(column, flex-start, 8px, flex-start);
+
+        .button {
+            width: 100%;
+            
+            .accordion {
+                cursor: pointer;
+                align-self: stretch;
+                padding: 8px 0px;
+                @include flex(row, center, 0px, center);
+        
+                .content {
+                    width: 100%;
+                    @include flex(row, center, 8px, flex-start);
+
+                    .text {
+                        width: 100%;
+                        @include text(18, 700, var(--text-color))
+                    }
+                }
+
+                .open_icon {
+                    animation: linear rotateOpenIcon var(--animation-time);
+                    rotate: 180deg;
+                }
+        
+                .close_icon {
+                    animation: linear rotateCloseIcon var(--animation-time);
+                }
+
+                .manage {
+                    @include flex(row, center, 12px, flex-start);
+                }
+            }
+
+            .group {
+                border-radius: 16px;
+                background: var(--block-color);
+                padding: 16px;
+                @include flex(row, flex-start, 16px, flex-start);
+
+                .row {
+                    width: 100%;
+                    align-self: stretch;
+                    align-content: flex-start;
+                    @include flex(row, flex-start, 16px, flex-start);
+                }
+
+                .cell {
+                    align-self: stretch;
+                    @include flex(column, flex-start, 8px, center);
+
+                    .title {
+                        @include text(16, 700, var(--text-color))
+                    }
+
+                    .position {
+                        position: relative;
+                    }
+                }
+
+                .drops {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.icon {
+    fill: var(--icon-color);
+    @include box(24px)
+}
+
+.minbutton {
+    cursor: pointer;
+    transition: var(--animation-time);
+    border-radius: 8px;
+    background: var(--component-color);
+    padding: 8px 16px;
+    @include flex(row, center, 4px, flex-start);
+}
+
+.minbutton_big {
+    padding: 10px 20px;
+}
+
+.minbutton:hover {
+    background: var(--component-color-hover);
+}
+
+.settings::-webkit-scrollbar {
+    width: 12px;
+}
+
+.settings::-webkit-scrollbar-track {
+    background: var(--component-color);
+}
+  
+.settings::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-color);
+    border-radius: 16px;
+    border: 3px solid var(--component-color);
+    transition: var(--animation-time);
+}      
+
+.settings::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-hover-color);
+}
+
+@keyframes rotateCloseIcon {
+    from {
+        rotate: 180deg;
+    }
+
+    to {
+        rotate: 0deg;
+    }
+}
+
+@keyframes rotateOpenIcon {
+    from {
+        rotate: 0deg;
+    }
+
+    to {
+        rotate: 180deg;
+    }
+}
+
+@media screen and (max-width: 1320px) {
+    .settings {
+        overflow: visible;
+        max-height: none;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .settings {
+        width: 100%;
+
+        .buttons .button .group .row {
+            flex-wrap: wrap;
+            flex: 1 0 0;
+    
+            .cell {
+                width: auto;
+                align-self: stretch;
+            }
+        }
+    }
+}

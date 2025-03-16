@@ -1,0 +1,139 @@
+@import '../../../../assets/scss/Mixins.scss';
+
+
+.plugin_wrapper {
+    width: 100%;
+    @include flex(row, flex-start, 24px, flex-start);
+
+    .discord {
+        @include flex(column, flex-start, 16px, flex-start);
+    }
+
+    .line {
+        background-color: var(--component-color);
+        height: 2px;
+        width: 100%;
+        border-radius: 16px;
+    }
+
+    .settings {
+        width: 100%;
+        height: calc(100vh - 104px);
+        overflow-y: scroll;
+        @include flex(column, flex-start, 24px, flex-start);
+    }
+
+    .mobile {
+        position: absolute;
+        
+        .button {
+            z-index: 1;
+            cursor: pointer;
+            position: fixed;
+            left: 12px;
+            bottom: 12px;
+            background: var(--primary-color);
+            border-radius: 100%;
+            padding: 16px;
+            transition: var(--animation-time);
+            @include box(24px);
+
+            .icon {
+                fill: var(--icon-color);
+            }
+        }
+
+        .button:hover {
+            background: var(--primary-hover-color);
+        }
+
+        .mobile_message {
+            z-index: 20;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100vw;
+            height: 100vh;
+
+            .background {
+                background: var(--modal-background);
+                width: 100vw;
+                height: 100vh;
+            }
+
+            .closeContainer {
+                animation: closeDropMessage var(--animation-time) linear;
+            }
+            
+            .container {
+                position: fixed;
+                width: 100vw;
+                height: 90vh;
+                top: 20vh;
+                background-color: rgba(54, 57, 62, 1);
+                border-radius: 16px 16px 0px 0px;
+                animation: openDropMessage var(--animation-time) linear;
+                @include flex(column, flex-start, 4px, flex-start);
+
+                .liner {
+                    width: 100%;
+                    padding: 16px 0px;
+                    @include flex(row, center, 0px, center);
+
+                    .line {
+                        cursor: pointer;
+                        width: 20%;
+                        height: 4px;
+                        background: #44484E;
+                        border-radius: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.settings::-webkit-scrollbar {
+    width: 12px;
+}
+
+.settings::-webkit-scrollbar-track {
+    background: var(--component-color);
+}
+  
+.settings::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-color);
+    border-radius: 16px;
+    border: 3px solid var(--component-color);
+    transition: var(--animation-time);
+}      
+
+.settings::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-hover-color);
+}
+
+@media screen and (max-width: 1320px) {
+    .plugin_wrapper {
+        flex-direction: column;
+
+        .discord {
+            width: 100%;
+
+            .message {
+                width: calc(100% - 32px);
+            }
+        }
+
+        .settings {
+            height: auto;
+            overflow: visible;
+        }
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .plugin_wrapper .discord .message {
+        display: none;
+        visibility: hidden;
+    }
+}

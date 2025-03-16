@@ -1,0 +1,109 @@
+@import '../../../../../../assets/scss/Mixins.scss';
+
+.card {
+    border-radius: 8px 8px 16px 16px;
+    background-color: var(--block-color);
+    @include flex(column, flex-start, 0px, flex-start);
+
+    .preview {
+        @include flex(column, flex-start, 0px, flex-start);
+
+        .image {
+            border-radius: 8px;
+            width: 436px;
+            height: 245.25px;
+        }
+    }
+
+    .info {
+        align-self: stretch;
+        @include padding-width(16px, 100%);
+        @include flex(column, flex-start, 8px, flex-start);
+
+        .name {
+            @include text(18, 700, var(--text-color))
+        }
+
+        .colors {
+            flex-wrap: wrap;
+            align-self: stretch;
+            padding: 8px 0px;
+            @include flex(row, flex-start, 8px, flex-start);
+
+            .color {
+                cursor: pointer;
+                border-radius: 100%;
+                @include box(32px);
+            }
+
+            .pink { background: linear-gradient(225deg, #FBAFFF 0%, #FBDEC0 100%) }
+            .blue { background: linear-gradient(225deg, #73A9FA 0%, #87F0FC 100%) }
+            .red { background: linear-gradient(225deg, #FD3C84 0%, #FFA58D 100%) }
+            .purple { background: linear-gradient(225deg, #D180F7 0%, #8AC7FF 100%) }
+            .green { background: linear-gradient(225deg, #59F67C 0%, #59A1F6 100%) }
+            .yellow { background: linear-gradient(225deg, #F3ED38 0%, #F74C06 100%) }
+            .white { background: white }
+        }
+
+        .button {
+            cursor: pointer;
+            border-radius: 8px;
+            background-color: var(--component-color);
+            transition: var(--animation-time);
+            @include padding-width(16px, 100%);
+            padding: 8px 16px;
+            align-self: stretch;
+            @include flex(row, center, 4px, center);
+
+            .icon {
+                fill: var(--icon-color);
+            }
+
+            .text {
+                text-decoration: none;
+                @include text(16, 600, var(--text-color))
+            }
+        }
+
+        .button:hover { background-color: var(--component-color-hover) }
+
+        .premiumButton { background-color: var(--premium-color) }
+        
+        .premiumButton:hover { background-color: #FFAC21 }
+    }
+}
+
+@media screen and (max-width: 1764px) {
+    .card .preview .image {
+        width: 408px;
+        height: 229.5;
+    }
+}
+
+@media screen and (max-width: 1320px) {
+    .card .preview .image {
+        width: 456px;
+        height: 257px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .card .preview .image {
+        width: 696px;
+        height: 392px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .card .preview .image {
+        width: 516px;
+        height: 290px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .card .preview .image {
+        width: 336px;
+        height: 189px;
+    }
+}

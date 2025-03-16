@@ -1,0 +1,213 @@
+@import '../../../../../assets/scss/Mixins.scss';
+
+.settings {
+    width: 100%;
+    background: var(--block-color);
+    max-height: calc(100vh - 260px);
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-color) var(--component-color);
+    border-radius: 16px;
+    align-self: stretch;
+    padding: 16px 0px;
+    @include flex(column, flex-start, 16px, flex-start);
+
+    .author, .body, .images, .footer, .fields {
+        align-self: stretch;
+        border-bottom: 1px solid #292F39;
+        @include padding-width(24px, 100%);
+        @include flex(column, flex-start, 4px, flex-start);
+        padding: 0px 24px;
+
+        .column {
+            flex-direction: column;
+        }
+
+        .row {
+            padding-bottom: 16px;
+            align-items: flex-start;
+            align-self: stretch;
+            flex-wrap: wrap;
+            @include flex(row, flex-start, 16px, flex-start);
+
+            .group {
+                width: 100%;
+                @include flex(column, flex-start, 16px, flex-start);
+            }
+
+            .cell {
+                display: flex;
+                min-width: 240px;
+                flex: 1 0 0;
+                @include flex(column, flex-start, 8px, center);
+
+                .text {
+                    @include text(16, 700, var(--text-color))
+                }
+
+                .input {
+                    height: 188px;
+                    overflow-y: scroll;
+                }
+
+                .color_picker {
+                    width: 100%;
+                    @include flex(row, flex-start, 8px, flex-start);
+
+                    .picker {
+                        cursor: pointer;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        appearance: none;
+                        border: none;
+                        border-image-width: 0;
+                        border-radius: 8px;
+                        padding: 0;
+                        @include box(44px);
+                    }
+
+                    .picker::-webkit-color-swatch {
+                        border-radius: 15px;
+                        border: none;
+                    }
+                    
+                    .picker::-moz-color-swatch {
+                        border-radius: 15px;
+                        border: none;
+                    }
+                }
+            }
+
+            .width {
+                width: 100%;
+            }
+
+            .field {
+                border-radius: 12px;
+                border: 1px solid #292F39;
+                align-self: stretch;
+                @include padding-width(20px, 100%);
+                @include flex(column, flex-start, 4px, flex-start);
+                padding: 0px 20px;
+
+                .manage_field {
+                    align-self: stretch;
+                    @include flex(column, flex-start, 16px, flex-start);
+
+                    .row {
+                        padding: 0px;
+                    }
+
+                    .rowswitch {
+                        padding-bottom: 20px;
+                    }
+                }
+            }
+
+            .blockswitch {
+                border-radius: 16px;
+                background: var(--component-color);
+                align-self: stretch;
+                @include padding-width(16px, 100%);
+                @include flex(row, center, 8px, flex-start);
+                padding: 14px 16px;
+
+                .text {
+                    width: 100%;
+                    @include text(16, 700, var(--text-color))
+                }
+            }
+        }
+    }
+
+    .fields {
+        border-bottom: 0px;
+    }
+
+    .accordion {
+        cursor: pointer;
+        padding: 16px 0px;
+        align-self: stretch;
+        @include flex(row, center, 8px, center);
+        
+        .title {
+            width: 100%;
+            @include text(18, 700, var(--text-color))
+        }
+
+        .icon {
+            fill: var(--icon-color)
+        }
+
+        .open_icon {
+            animation: linear rotateOpenIcon var(--animation-time);
+            rotate: 180deg;
+        }
+
+        .close_icon {
+            animation: linear rotateCloseIcon var(--animation-time);
+        }
+
+        .rowbutton {
+            @include flex(row, center, 12px, flex-start);
+
+            .button {
+                background: var(--component-color);
+                border-radius: 8px;
+                transition: var(--animation-time);
+                padding: 8px 16px;
+                @include flex(row, center, 0px, center);
+            }
+
+            .button:hover {
+                background: var(--component-color-hover);
+            }
+        }
+    }
+}
+
+@keyframes rotateCloseIcon {
+    from {
+        rotate: 180deg;
+    }
+
+    to {
+        rotate: 0deg;
+    }
+}
+
+@keyframes rotateOpenIcon {
+    from {
+        rotate: 0deg;
+    }
+
+    to {
+        rotate: 180deg;
+    }
+}
+
+.settings::-webkit-scrollbar {
+    width: 12px;
+}
+
+.settings::-webkit-scrollbar-track {
+    background: var(--component-color);
+}
+  
+.settings::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-color);
+    border-radius: 16px;
+    border: 3px solid var(--component-color);
+    transition: var(--animation-time);
+}      
+
+.settings::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-hover-color);
+}
+
+@media screen and (max-width: 1320px) {
+    .settings {
+        overflow: visible;
+        max-height: none;
+    }
+}

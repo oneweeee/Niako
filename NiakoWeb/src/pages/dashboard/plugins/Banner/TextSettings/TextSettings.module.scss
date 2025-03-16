@@ -1,0 +1,45 @@
+@import '../../../../../assets/scss/Mixins.scss';
+
+.settings {
+    overflow: scroll;
+    height: calc(100vh - 104px);
+    width: 100%;
+    @include flex(column, flex-start, 16px, flex-start);
+
+    .cell {
+        width: 100%;
+        @include flex(column, center, 8px, flex-start);
+
+        .title {
+            width: 100%;
+            align-self: stretch;
+            @include flex(row, center, 8px, flex-start);
+
+            .icon {
+                fill: var(--icon-color)
+            }
+
+            .text {
+                @include text(16, 400, var(--text-color))
+            }
+        }
+    }
+
+    .items {
+        width: 100%;
+        @include flex(column, flex-start, 16px, flex-start)
+    }
+}
+
+@media screen and (max-width: 1320px) {
+    .settings {
+        overflow: auto;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .settings {
+        height: calc(100vh - 104px - 285px);
+    }
+}

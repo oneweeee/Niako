@@ -1,0 +1,220 @@
+@import '../../../../assets/scss/Mixins.scss';
+
+.plugin_wrapper {
+    width: 100%;
+    @include flex(row, flex-start, 24px, center);
+
+    .icon {
+        fill: var(--icon-color)
+    }
+
+    .preview {
+        animation: linear dropdownAnimation var(--animation-time);
+        @include flex(column, flex-start, 16px, flex-start);
+
+        .name_container {
+            @include flex(row, center, 8px, flex-start);
+
+            .name {
+                @include text(32, 700, var(--text-color))
+            }
+        }
+
+        .block {
+            width: 1280px;
+            height: 720px;
+
+            .background {
+                width: 1280px;
+                height: 720px;
+                border-radius: 8px;
+            }
+
+            .canvas {
+                position: absolute;
+                width: 1280px;
+                height: 720px;
+                border-radius: 8px;
+            }
+        }
+    }
+}
+
+.content {
+    min-width: 306px;
+    height: calc(100vh - 104px);
+    margin: auto;
+    @include flex(column, center, 4px, center);
+
+    .title {
+        @include text(32, 700, var(--text-color))
+    }
+
+    .description {
+        @include flex(column, center, 8px, center);
+        
+        .text {
+            text-align: center;
+            @include text(18, 400, var(--text-color));
+
+            .bold {
+                cursor: unset;
+                text-decoration: none;
+                font-weight: 800;
+                color: var(--text-color);
+            }
+
+            .link {
+                text-decoration: none;
+                color: var(--primary-color);
+                transition: var(--animation-time);
+            }
+
+            .link:hover {
+                color: var(--primary-hover-color);
+                border-bottom: 1px solid var(--primary-hover-color);
+            }
+        }
+    }
+}
+
+.settings_wraper {
+    animation: linear dropdownAnimation var(--animation-time);
+}
+
+.tabs_wraper {
+    animation: linear dropupAnimation var(--animation-time);
+}
+
+.anticlick {
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+@media screen and (max-width: 1764px) {
+    .plugin_wrapper .preview .block {
+        width: 864px;
+        height: 486px;
+
+        .background {
+            width: 864px;
+            height: 486px;
+            border-radius: 8px;
+        }
+
+        .canvas {
+            position: absolute;
+            width: 864px;
+            height: 486px;
+            border-radius: 8px;
+        }
+    }
+}
+
+@media screen and (max-width: 1320px) {
+    .plugin_wrapper {
+        @include flex(column, center, 24px, center);
+
+        .preview {
+            width: 100%;
+            align-items: center;
+
+            .block {
+                width: 936px;
+                height: 526.5px;
+        
+                .background {
+                    width: 936px;
+                    height: 526.5px;
+                }
+        
+                .canvas {
+                    position: absolute;
+                    width: 936px;
+                    height: 526.5px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .plugin_wrapper .preview .block {
+        width: 696px;
+        height: 391.5px;
+
+        .background {
+            width: 696px;
+            height: 391.5px;
+        }
+
+        .canvas {
+            position: absolute;
+            width: 696px;
+            height: 391.5px;
+        }
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .plugin_wrapper .preview .block {
+        width: 516px;
+        height: 290.25px;
+
+        .background {
+            width: 516px;
+            height: 290.25px;
+        }
+
+        .canvas {
+            position: absolute;
+            width: 516px;
+            height: 290.25px;
+        }
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .plugin_wrapper .preview .block {
+        width: 336px;
+        height: 189px;
+
+        .background {
+            width: 336px;
+            height: 189px;
+        }
+
+        .canvas {
+            position: absolute;
+            width: 336px;
+            height: 189px;
+        }
+    }
+}
+
+@keyframes dropupAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(32px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes dropdownAnimation {
+    from {
+        opacity: 0;
+        transform: translateX(-32px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}

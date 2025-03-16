@@ -1,0 +1,32 @@
+@import '../../../../../assets/scss/Mixins.scss';
+
+.settings {
+    overflow: scroll;
+    height: calc(100vh - 104px);
+    width: 100%;
+    @include flex(column, flex-start, 16px, flex-start);
+
+    .cards {
+        flex-wrap: wrap;
+        align-content: flex-start;
+        @include flex(column, flex-start, 24px, flex-start);
+    }
+}
+
+@media screen and (max-width: 1320px) {
+    .settings {
+        overflow: unset;
+
+        .cards {
+            width: 100%;
+            flex-direction: row;
+        }
+    }
+}
+
+
+@media screen and (max-width: 540px) {
+    .settings .cards {
+        justify-content: center;
+    }
+}

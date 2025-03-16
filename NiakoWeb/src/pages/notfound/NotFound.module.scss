@@ -1,0 +1,41 @@
+@import '../../assets/scss/Mixins.scss';
+
+.notfound_content {
+    margin: auto;
+    height: 100vh;
+    justify-content: center;
+    min-width: 306px;
+    margin: auto;
+    @include flex(column, center, 4px, center);
+
+    .title {
+        @include text(32, 700, var(--text-color))
+    }
+
+    .description {
+        @include flex(column, center, 8px, center);
+        
+        .text {
+            text-align: center;
+            @include text(18, 400, var(--text-color));
+
+            .bold {
+                cursor: unset;
+                text-decoration: none;
+                font-weight: 800;
+                color: var(--text-color);
+            }
+
+            .link {
+                text-decoration: none;
+                color: var(--primary-color);
+                transition: var(--animation-time);
+            }
+
+            .link:hover {
+                color: var(--primary-hover-color);
+                border-bottom: 1px solid var(--primary-hover-color);
+            }
+        }
+    }
+}

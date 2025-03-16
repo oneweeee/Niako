@@ -1,0 +1,204 @@
+@import '../../../../../assets/scss/Mixins.scss';
+
+.wrapper {
+    width: 100%;
+    @include flex(column, flex-start, 16px, flex-start);
+
+    .cell {
+        border-radius: 16px;
+        background-color: var(--block-color);
+        @include padding-width(16px, 100%);
+        @include flex(column, flex-start, 16px, flex-start);
+
+        .text { @include text(16, 700, var(--text-color)) }
+
+        .title {
+            @include flex(row, flex-start, 8px, flex-start);
+
+            .text { @include text(16, 700, var(--text-color)) }
+            .icon { fill: var(--icon-color) }
+        }
+    }
+
+    .embeds {
+        width: 100%;
+        background: var(--block-color);
+        border-radius: 16px;
+        align-self: stretch;
+        @include flex(column, flex-start, 16px, flex-start);
+
+        .embed, .author, .body, .images, .footer, .fields {
+            @include padding-width(12px, 100%);
+            padding: 0px 12px;
+        }
+
+        .line {
+            height: 2px;
+            width: 100%;
+            background: var(--component-color);
+        }
+
+        .lastEmbed {
+            padding-bottom: 12px;
+        }
+
+        .embed {
+            .row {
+                padding-bottom: 16px;
+                align-items: flex-start;
+                align-self: stretch;
+                flex-wrap: wrap;
+                width: 100%;
+                @include flex(row, flex-start, 8px, flex-start);
+    
+                .group {
+                    width: 100%;
+                    @include flex(column, flex-start, 8px, flex-start);
+                }    
+            }
+
+            .cell {
+                min-width: 220px;
+                flex: 1 0 0;
+                @include padding-width(12px, 100%);
+            }
+        }
+    }
+
+    .fields {
+        border-bottom: 0px;
+    }
+
+    .input {
+        height: 188px;
+        overflow-y: scroll;
+    }
+
+    .width {
+        width: 100%;
+    }
+
+    .field {
+        border-radius: 12px;
+        border: 1px solid #292F39;
+        align-self: stretch;
+        @include padding-width(20px, 100%);
+        @include flex(column, flex-start, 4px, flex-start);
+        padding: 0px 20px;
+
+        .manage_field {
+            align-self: stretch;
+            @include flex(column, flex-start, 16px, flex-start);
+
+            .row {
+                padding: 0px;
+            }
+
+            .rowswitch {
+                padding-bottom: 20px;
+            }
+        }
+    }
+
+    .blockswitch {
+        border-radius: 16px;
+        background: var(--component-color);
+        align-self: stretch;
+        @include padding-width(16px, 100%);
+        @include flex(row, center, 8px, flex-start);
+        padding: 14px 16px;
+
+        .text {
+            width: 100%;
+            @include text(16, 700, var(--text-color))
+        }
+    }
+
+    .color_picker {
+        width: 100%;
+        @include flex(row, flex-start, 8px, flex-start);
+
+        .picker {
+            cursor: pointer;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border: none;
+            border-image-width: 0;
+            border-radius: 8px;
+            padding: 0;
+            @include box(44px);
+        }
+
+        .picker::-webkit-color-swatch {
+            border-radius: 15px;
+            border: none;
+        }
+        
+        .picker::-moz-color-swatch {
+            border-radius: 15px;
+            border: none;
+        }
+    }
+
+    .accordion {
+        cursor: pointer;
+        padding: 12px 0px;
+        align-self: stretch;
+        @include flex(row, center, 8px, center);
+        
+        .title {
+            width: 100%;
+            @include text(18, 700, var(--text-color))
+        }
+
+        .icon {
+            fill: var(--icon-color)
+        }
+
+        .open_icon {
+            animation: linear rotateOpenIcon var(--animation-time);
+            rotate: 180deg;
+        }
+
+        .close_icon {
+            animation: linear rotateCloseIcon var(--animation-time);
+        }
+
+        .rowbutton {
+            @include flex(row, center, 12px, flex-start);
+
+            .button {
+                background: var(--component-color);
+                border-radius: 8px;
+                transition: var(--animation-time);
+                padding: 8px 16px;
+                @include flex(row, center, 0px, center);
+            }
+
+            .button:hover {
+                background: var(--component-color-hover);
+            }
+        }
+    }
+}
+
+@keyframes rotateCloseIcon {
+    from {
+        rotate: 180deg;
+    }
+
+    to {
+        rotate: 0deg;
+    }
+}
+
+@keyframes rotateOpenIcon {
+    from {
+        rotate: 0deg;
+    }
+
+    to {
+        rotate: 180deg;
+    }
+}

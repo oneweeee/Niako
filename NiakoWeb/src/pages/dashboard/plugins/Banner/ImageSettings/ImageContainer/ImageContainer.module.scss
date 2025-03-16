@@ -1,0 +1,130 @@
+@import '../../../../../../assets/scss/Mixins.scss';
+
+.item {
+    align-self: stretch;
+    @include flex(column, flex-start, 0px, flex-start);
+
+    .accordion {
+        cursor: pointer;
+        min-width: 336px;
+        align-self: stretch;
+        padding: 8px 0px;
+        @include flex(row, flex-start, 8px, space-between);
+
+        .icon {
+            fill: var(--icon-color)
+        }
+
+        .open_icon {
+            animation: linear rotateOpenIcon var(--animation-time);
+            rotate: 180deg;
+        }
+
+        .close_icon {
+            animation: linear rotateCloseIcon var(--animation-time);
+        }
+
+        .text {
+            @include text(18, 700, var(--text-color))
+        }
+    }
+
+    .settings {
+        align-self: stretch;
+        @include flex(column, flex-start, 16px, flex-start);
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height var(--animation-time) linear;
+
+        .group {
+            align-self: stretch;
+            @include flex(column, flex-start, 8px, flex-start);
+            
+            .title {
+                @include text(16, 400, var(--text-group-color))
+            }
+            
+            .cell {
+                border-radius: 16px;
+                background-color: var(--block-color);
+                align-self: stretch;
+                @include flex(column, flex-start, 16px, flex-start);
+                @include padding-width(16px, 100%);
+
+                .group {
+                    align-self: stretch;
+                    @include flex(row, flex-start, 24px, flex-start);     
+                    
+                    .setting {
+                        flex: 1 0 0;
+                        @include flex(column, flex-start, 8px, flex-start);
+
+                        .main {
+                            align-self: stretch;
+                            @include flex(column, flex-start, 8px, flex-start);
+
+                            .color {
+                                @include flex(row, flex-start, 8px, flex-start);
+
+                                .picker {
+                                    cursor: pointer;
+                                    -webkit-appearance: none;
+                                    -moz-appearance: none;
+                                    appearance: none;
+                                    border: none;
+                                    border-image-width: 0;
+                                    border-radius: 8px;
+                                    padding: 0;
+                                    @include box(40px);
+                                }
+
+                                .picker::-webkit-color-swatch {
+                                    border-radius: 15px;
+                                    border: none;
+                                }
+                                
+                                .picker::-moz-color-swatch {
+                                    border-radius: 15px;
+                                    border: none;
+                                }
+                            }
+
+                            .buttons_group {
+                                align-self: stretch;
+                                @include flex(column, flex-start, 16px, flex-start);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .settings_open_avatar {
+        max-height: 520px;
+    }
+
+    .settings_open_image {
+        max-height: 576px;
+    }
+}
+
+@keyframes rotateCloseIcon {
+    from {
+        rotate: 180deg;
+    }
+
+    to {
+        rotate: 0deg;
+    }
+}
+
+@keyframes rotateOpenIcon {
+    from {
+        rotate: 0deg;
+    }
+
+    to {
+        rotate: 180deg;
+    }
+}

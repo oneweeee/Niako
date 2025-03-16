@@ -1,0 +1,133 @@
+@import '../../../../../assets/scss/Mixins.scss';
+
+.icon {
+    @include box(24px)
+}
+
+.settings {
+    width: 100%;
+    @include flex(column, flex-start, 24px, flex-start);
+
+    .groups {
+        align-self: stretch;
+        @include flex(column, flex-start, 16px, flex-start);
+
+        .group {
+            width: 100%;
+            align-self: stretch;
+            @include flex(column, flex-start, 8px, flex-start);
+    
+            .title {
+                @include text(16, 400, var(--text-group-color))
+            }
+    
+            .setting_group {
+                width: 100%;
+                @include flex(row, flex-start, 16px, flex-start);
+
+                .color_picker {
+                    width: 100%;
+                    @include flex(row, flex-start, 8px, flex-start);
+
+                    .picker {
+                        cursor: pointer;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        appearance: none;
+                        border: none;
+                        border-image-width: 0;
+                        border-radius: 8px;
+                        padding: 0;
+                        @include box(44px);
+                    }
+
+                    .picker::-webkit-color-swatch {
+                        border-radius: 15px;
+                        border: none;
+                    }
+                    
+                    .picker::-moz-color-swatch {
+                        border-radius: 15px;
+                        border: none;
+                    }
+                }
+    
+                .title {
+                    width: 100%;
+                    align-self: stretch;
+                    @include flex(row, center, 4px, flex-start);
+        
+                    .icon {
+                        fill: var(--icon-color)
+                    }
+
+                    .question {
+                        fill: var(--icon-grey-color)
+                    }
+    
+                    .text {
+                        @include text(16, 700, var(--text-color))
+                    }
+                }
+    
+                .cell {
+                    border-radius: 16px;
+                    background-color: var(--block-color);
+                    justify-content: center;
+                    @include padding-width(16px, 100%);
+                    padding: 16px 14px;
+                }
+    
+                .column {
+                    @include flex(column, flex-start, 16px, center);
+                }
+    
+                .row {
+                    @include flex(row, flex-start, 16px, center);
+                }
+            }
+        }
+
+        .setting_custom_group {
+            gap: 16px;
+        }
+
+        .rows {
+            align-content: flex-start;
+            align-self: stretch;
+            @include flex(row, flex-start, 16px, flex-start);
+        }
+    }
+}
+
+@media screen and (max-width: 1320px) {
+    .settings {
+        height: auto;
+        
+        .group {
+            .setting_group {
+                flex-direction: row;
+            }
+
+            .group_download {
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .settings .group .setting_group {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .settings {
+        display: none;
+
+        .groups .group .setting_group, .groups .rows {
+            flex-direction: column;
+        }
+    }
+}

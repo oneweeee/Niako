@@ -1,0 +1,57 @@
+@import '../../../../../assets/scss/Mixins.scss';
+
+.content {
+    width: 100%;
+    @include flex(column, flex-start, 40px, flex-start);
+
+    .loggers {
+        width: 100%;
+        align-content: center;
+        flex-wrap: wrap;
+        @include flex(row, center, 24px, flex-start);
+
+        .block {
+            width: 436px;
+            border-radius: 16px;
+            background: var(--block-color);
+            min-width: 336px;
+            padding: 16px;
+            flex-shrink: 0;
+            @include flex(column, flex-start, 20px, flex-start);
+
+            .title {
+                width: 100%;
+                @include flex(row, center, 0px, space-between);
+
+                .text { @include text(18, 600, var(--text-color)) }
+            }
+        }
+    }
+
+    .container {
+        align-self: stretch;
+        @include flex(column, center, 4px, flex-start);
+        margin-bottom: 32px;
+
+        .pagination {
+            @include flex(row, center, 12px, flex-start);
+
+            .pages {
+                @include flex(row, center, 4px, flex-start);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1030px) {
+    .content .loggers .block {
+        width: 424px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .content .loggers .block {
+        min-width: unset;
+        @include padding-width(16px, 100%);
+    }
+}

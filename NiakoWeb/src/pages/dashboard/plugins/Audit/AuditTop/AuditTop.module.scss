@@ -1,0 +1,38 @@
+@import '../../../../../assets/scss/Mixins.scss';
+
+.top {
+    width: 100%;
+    border-right: 1px solid #1A1E23;
+    border-bottom: 1px solid #1A1E23;
+    border-left: 1px solid #1A1E23;
+    background: var(--block-color);
+    @include padding-width(16px, 100%);
+    padding: 12px 16px;
+    align-self: stretch;
+    position: relative;
+    top: -16px;
+    @include bottom-boder(16px);
+    @include flex(row, center, 0px, space-between);
+
+    .title {
+        @include flex(row, center, 8px, flex-start);
+        .icon { fill: var(--icon-color) }
+        .text { @include text(16, 700, var(--text-color)) }
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .top { top: -18px }
+}
+
+
+@media screen and (max-width: 540px) {
+    .top {
+        position: absolute;
+        top: 72px;
+        left: 0;
+        border-radius: 0;
+        border-right: 0;
+        border-left: 0;
+    };
+}

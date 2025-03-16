@@ -1,0 +1,31 @@
+@import '../../../../../assets/scss/Mixins.scss';
+
+.wrapper {
+    width: 100%;
+    @include flex(column, flex-start, 16px, flex-start);
+
+    .error {
+        width: 100%;
+        text-align: center;
+        @include text(18, 700, var(--text-color))
+    }
+
+    .settings {
+        width: 100%;
+        @include flex(row, center, 12px, center);
+
+        .cell {
+            border-radius: 16px;
+            background-color: var(--block-color);
+            @include padding-width(16px, 100%);
+            @include flex(column, flex-start, 16px, flex-start);
+
+            .title {
+                @include flex(row, flex-start, 8px, flex-start);
+
+                .text { @include text(16, 700, var(--text-color)) }
+                .icon { fill: var(--icon-color) }
+            }
+        }
+    }
+}
