@@ -1,0 +1,41 @@
+@import '../../assets/scss/Mixins.scss';
+
+.modal_wrapper {
+    position: absolute;
+    z-index: 6;
+
+    .modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        border-radius: 16px;
+        background-color: var(--block-color);
+        @include flex(column, flex-start, 16px, flex-start);
+        @include padding-width(16px, auto);
+        padding: 16px;
+        min-width: 336px;
+        max-width: 564px;
+
+        .content {
+            align-self: stretch;
+            @include flex(column, flex-start, 8px, flex-start);
+
+            .title {
+                align-self: stretch;
+                @include flex(row, center, 8px, flex-start);
+
+                .text {
+                    flex: 1 0 0;
+                    @include text(18px, 700, var(--text-color))
+                }
+            }
+
+            .description {
+                align-self: stretch;
+                @include text(16px, 400, var(--text-description-color))
+            }
+        }
+    }
+}

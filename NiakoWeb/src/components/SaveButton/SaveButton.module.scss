@@ -1,0 +1,72 @@
+@import '../../assets/scss/Mixins.scss';
+
+.button {
+    z-index: 2;
+    cursor: pointer;
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    background: var(--system-green);
+    border-radius: 100px;
+    padding: 16px;
+    align-self: stretch;
+    transition: var(--animation-time);
+    @include flex(row, center, 0px, center);
+
+    .icon {
+        fill: var(--icon-color)
+    }
+}
+
+.button:hover {
+    background: var(--system-green-hover);
+}
+
+.show {
+    animation: show var(--animation-time) ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.hide {
+    animation: hide var(--animation-time) ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    cursor: unset;
+}
+
+.close {
+    display: none;
+}
+
+.loading {
+    cursor: unset;
+
+    .loader {
+        color: #fff;
+    }
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes hide {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+}

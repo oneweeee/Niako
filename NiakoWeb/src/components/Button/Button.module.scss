@@ -1,0 +1,66 @@
+@import '../../assets/scss/Mixins.scss';
+
+.button {
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 8px 16px;
+    min-width: 112px;
+    transition: var(--animation-time);
+    @include flex(row, center, 4px, center);
+
+    .icon {
+        fill: var(--icon-color)
+    }
+
+    .text {
+        @include text(16px, 600, var(--text-color))
+    }
+}
+
+.button__stroke {
+    border: var(--primary-color) 2px solid;
+}
+
+.theme__fill {
+    background: var(--component-color);
+}
+
+.theme__fill:hover {
+    background: var(--component-color-hover);
+}
+
+.primary__fill {
+    background: var(--primary-color)
+}
+
+.primary__fill:hover {
+    background: var(--primary-hover-color)
+}
+
+.red__fill {
+    background: var(--red-color)
+}
+
+.red__fill:hover {
+    background: var(--red-color-hover)
+}
+
+.loading {
+    cursor: unset;
+}
+
+.primary__loading__ffill:hover {
+    background: var(--primary-color)
+}
+
+.theme__loading__ffill:hover {
+    background: var(--component-color);
+}
+
+.red__loading__ffill {
+    background: var(--red-color);
+}
+
+.loading .loader {
+    color: white
+}

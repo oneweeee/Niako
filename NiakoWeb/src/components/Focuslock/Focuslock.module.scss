@@ -1,0 +1,47 @@
+@import '../../assets/scss/Mixins.scss';
+
+.focuslock_wrapper {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 2400;
+    background-color: var(--modal-background);
+
+    .background {
+        background-color: var(--component-color);
+    }
+
+    .focuslock {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 16px;
+        background-color: var(--block-color);
+        @include flex(column, flex-start, 16px, flex-start);
+        @include padding-width(16px, auto);
+        padding: 16px;
+
+        .content {
+            align-self: stretch;
+            @include flex(column, flex-start, 8px, flex-start);
+
+            .title {
+                align-self: stretch;
+                @include flex(row, center, 8px, flex-start);
+
+                .text {
+                    flex: 1 0 0;
+                    @include text(18px, 700, var(--text-color))
+                }
+            }
+
+            .description {
+                align-self: stretch;
+                @include text(16px, 400, var(--text-description-color))
+            }
+        }
+    }
+}

@@ -1,0 +1,70 @@
+@import '../../assets/scss/Mixins.scss';
+
+.container {
+    overflow-x: auto;
+    width: 100%;
+    list-style: none;
+    @include flex(row, flex-start, 8px, flex-start);
+
+    .button {
+        cursor: pointer;
+        width: max-content;
+        border-radius: 8px;
+        border: 1px solid var(--component-color);
+        transition: var(--animation-time);
+        padding: 8px 24px;
+        @include flex(row, center, 8px, center);
+        white-space: nowrap;
+
+        .text { @include text(16, 700, var(--text-color)) }
+    }
+
+    .button:hover {
+        background: var(--component-color-hover);
+    }
+
+    .active {
+        cursor: default;
+        background: var(--component-color);
+    }
+
+    .active:hover {
+        background: var(--component-color);
+    }
+
+    .start {
+        position: absolute;
+        height: 40px;
+        width: 80px;
+        left: 8px;
+        background: linear-gradient(270deg, rgba(0, 0, 0, 0.00) 0%, var(--background-color) 100%);
+    }
+
+    .end {
+        position: absolute;
+        height: 40px;
+        width: 80px;
+        right: 8px;
+        background: linear-gradient(270deg, var(--background-color) 0%, rgba(0, 0, 0, 0.00) 100%);
+    }
+}
+
+
+.container::-webkit-scrollbar {
+    width: 12px;
+}
+
+.container::-webkit-scrollbar-track {
+    background: var(--component-color);
+}
+  
+.container::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-color);
+    border-radius: 16px;
+    border: 3px solid var(--component-color);
+    transition: var(--animation-time);
+}      
+
+.container::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-hover-color);
+}

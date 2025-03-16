@@ -1,0 +1,29 @@
+@import '../../assets/scss/Mixins.scss';
+
+.button {
+    cursor: pointer;
+    background-color: var(--component-color);
+    border: 0.5px solid var(--component-border);
+    transition: all var(--animation-time);
+    @include circle();
+    @include padding-width(15px, 54px);
+    @include flex(row, center, 8px, center);
+
+    .icon {
+        fill: var(--icon-color)
+    }
+}
+
+.mini {
+    @include padding-width(7px, 38px); 
+}
+
+.button:hover {
+    background-color: var(--component-color-hover);
+}
+
+@media screen and (max-width: 540px) {
+    .adaptive {
+        @include padding-width(7px, 38px); 
+    }
+}

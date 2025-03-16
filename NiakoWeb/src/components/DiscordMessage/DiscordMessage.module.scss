@@ -1,0 +1,456 @@
+@import '../../assets/scss/Functions.scss';
+@import '../../assets/scss/Mixins.scss';
+
+.background {
+    background-color: rgba(54, 57, 62, 1);
+    border-radius: 16px;
+    padding: 16px;
+    width: 636px;
+    max-width: 898px;
+    flex-shrink: 0;
+    @include flex(row, flex-start, 16px, flex-start);
+
+    .author_avatar {
+        align-self: stretch;
+        padding: 5px 0px 0px 0px;
+        @include flex(row, flex-start, 8px, flex-start);
+
+        .avatar {
+            border-radius: 100%;
+            @include box(40px);
+        }
+    }
+
+    .message {
+        flex: 1 0 0;
+        @include flex(column, flex-start, 0px, flex-start);
+
+        .header {
+            padding-top: 2px;
+            padding-bottom: 4px;
+            @include flex(row, baseline, 8px, flex-start);
+
+            .author {
+                @include flex(row, center, 4px, flex-start);
+
+                .username {
+                    @include text(16, 400, var(--text-color));
+                }
+
+                .badge {
+                    background: #5865F2;
+                    border-radius: 2px;
+                    height: 15px;
+                    padding: 1.2px 4.4px 0px 4.4px;
+                    @include flex(row, center, 0px, center);
+
+                    .name {
+                        @include text(10, 400, var(--text-color));
+                    }
+                }
+            }
+
+            .timestamp {
+                @include text(12, 400, rgba(114, 118, 125, 1));
+            }
+        }
+
+        .content {
+            word-break: break-all;
+            @include text(14, 400, var(--text-color));
+            font-family: 'gg sans', sans-serif;
+            padding-bottom: 4px;
+        }
+
+        .embeds {
+            @include flex(column, flex-start, 2px, flex-start);
+        }
+
+        .components {
+            max-width: 1009px;
+            padding-top: 8px;
+            align-content: flex-start;
+            @include flex(column, flex-start, 8px, flex-start);
+
+            .row {
+                align-self: stretch;
+                flex-wrap: wrap;
+                @include flex(row, flex-start, 8px, flex-start);
+            }
+        }
+    }
+}
+
+.button {
+    width: auto;
+    cursor: grab;
+    transition: var(--animation-time);
+    border-radius: 3px;
+    background: #4f5058;
+    padding: 4px 20px;
+    @include flex(row, flex-start, 8px, flex-start);
+
+    .emoji {
+        @include box(22px)
+    }
+
+    .label {
+        line-height: 22px;
+        @include text(12, 400, var(--text-color));
+        font-family: 'gg sans', sans-serif;
+    }
+}
+
+.button:hover {
+    background: #6c6e76;
+}
+
+.button_green {
+    background: #2d7e4e;
+}
+
+.button_green:hover {
+    background: #24653e;
+}
+
+.button_red {
+    background: #d63d44;
+}
+
+.button_red:hover {
+    background: #9d2f31;
+}
+
+.button_blue {
+    background: #5865e7;
+}
+
+.button_blue:hover {
+    background: #4853ba;
+}
+
+.select {
+    cursor: pointer;
+    width: 342px;
+    background: #232426;
+    transition: var(--animation-time);
+    border-radius: 3px;
+    padding: 12px;
+    @include flex(row, flex-start, 0px, flex-start);
+
+    .placeholder {
+        width: 100%;
+        @include text(14, 400, #9299a1);
+        font-family: 'gg sans', sans-serif;
+    }
+
+    .icon {
+        fill: #9299a1;
+        @include box(18px)
+    }
+}
+
+.select:hover {
+    box-shadow: 0px 0px 1px black;
+}
+
+.embed {
+    align-self: stretch;
+    @include flex(column, flex-start, 8px, flex-start);
+    
+    .root {
+        align-self: stretch;
+        @include flex(row, flex-start, 0px, flex-start);
+
+        .line {
+            border-radius: 4px 0px 0px 4px;
+            width: 4px;
+            align-self: stretch;
+        }
+
+        .container {
+            background: #2F3136;
+            border-radius: 0px 4px 4px 0px;
+            max-width: 516px;
+            padding: 1px;
+            flex: 1 0 0;
+            @include flex(row, flex-start, 0px, flex-start);
+            
+            .wrapper {
+                padding: 8px 16px 16px 12px;
+                @include flex(row, flex-start, 0px, flex-start);
+
+                .content {
+                    width: auto;
+                    margin-top: 8px;
+                    @include flex(column, flex-start, 8px, flex-start);
+
+                    .author, .footer {
+                        @include flex(row, flex-start, 8px, flex-start);
+
+                        .name {
+                            @include text(14, 700, var(--text-color));
+                            font-family: 'gg sans', sans-serif;
+                        }
+
+                        .nameurl {
+                            cursor: pointer
+                        }
+                        
+                        .nameurl:hover {
+                            border-bottom: 1px solid var(--text-color);
+                        }
+    
+                        .text {
+                            word-break: break-all;
+                            @include text(12, 500, var(--text-color));
+                            font-family: 'gg sans', sans-serif;
+                        }
+
+                        .timestamp {
+                            @include flex(row, flex-start, 4px, flex-start);
+
+                            .text {
+                                @include text(12, 500, var(--text-color));
+                            }
+                        }
+    
+                        .author_icon {
+                            @include box(20px)
+                        }
+    
+                        .footer_icon {
+                            @include box(20px)
+                        }
+                    }
+
+                    .footer {
+                        align-items: center;
+                    }
+    
+                    .title {
+                        word-break: break-all;
+                        @include text(16, 700, var(--text-color));
+                        font-family: 'gg sans', sans-serif;
+                    }
+
+                    .url {
+                        cursor: pointer;
+                        color: #00aff4;
+                    }
+
+                    .url:hover {
+                        border-bottom: 1px solid #00aff4;
+                    }
+    
+                    .description {
+                        word-break: break-all;
+                        @include text(14, 400, var(--text-color));
+                        font-family: 'gg sans', sans-serif;
+                    }
+
+                    .fields {
+                        display: grid;
+                        grid-column: 1/1;
+                        grid-gap: 8px;
+
+                        .field {
+                            grid-column: 1/13;
+
+                            .name {
+                                word-break: break-all;
+                                @include text(14, 600, var(--text-color));
+                                font-family: 'gg sans', sans-serif;
+                            }
+
+                            .value {
+                                @include text(14, 400, var(--text-color));
+                                font-family: 'gg sans', sans-serif;
+                            }
+                        }
+
+                        .inline {
+                            flex-grow: 1;
+                            flex-basis: auto;
+                            min-width: 150px;
+                        }
+
+                        .inline_3 {
+                            grid-column: 9/13 !important;
+                        }
+                          
+                        .inline_2 {
+                            grid-column: 5/9 !important;
+                        }
+                          
+                        .inline_1 {
+                            grid-column: 1/5 !important;
+                        }
+                    }
+
+                    .image {
+                        margin-top: 8px;
+                        border-radius: 4px;
+                        max-width: 100%;
+                    }
+                }
+
+                .thumbnail {
+                    border-radius: 4px;
+                    flex-shrink: 0;
+                    grid-column: 2/2;
+                    grid-row: 1/8;
+                    justify-self: end;
+                    padding: 8px 0px 0px 16px;
+                    max-height: 80px;
+                    max-width: 80px;
+                    object-fit: contain;
+                    object-position: top center;
+                }
+            }
+        }
+    }
+}
+
+blockquote {
+    position: relative;
+    padding: 0 8px 0 12px;
+    margin: 0;
+}
+  
+blockquote::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 4px;
+    border-radius: 4px;
+    background-color: #4f545c;
+}
+
+code {
+    background: #202225;
+    padding: 2.5px;
+    white-space: break-spaces;
+    font-family: Consolas, Andale Mono WT, Andale Mono, Lucida Console,
+      Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono,
+      Liberation Mono, Nimbus Mono L, Monaco, Courier New, Courier, monospace;
+}
+
+u {
+    text-decoration-color: rgb(220, 221, 222);
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: auto;
+}
+
+strong {
+    font-weight: 700;
+}
+
+em {
+    font-style: italic;
+}
+
+@media screen and (max-width: 720px) {
+    .background {
+        padding: 4px;
+        gap: 8px;
+        width: 100%;
+        height: 75vh;
+        overflow-y: scroll;
+
+        .author_avatar .avatar {
+            @include box(32px)
+        }
+
+        .message {
+            width: 100%;
+            .header {
+                .author {
+                    .username {
+                        font-size: toRem(14);
+                    }
+                    .badge {
+                        padding: 1px 4px 0px 4px;
+                        .name {
+                            font-size: toRem(10);
+                        }
+                    }
+                }
+    
+                .timestamp {
+                    font-size: toRem(10);
+                }
+            }
+
+            .embeds {
+                width: 100%;
+            }
+        }
+    }
+
+    .embed, .embed .root {
+        width: 100%;
+    }
+    
+    .embed .root .container {
+        width: 100%;
+        margin-right: 12px;
+
+        .wrapper {
+            padding: 6px;
+            width: 100%;
+
+            .content {
+                width: 100%;
+                margin-top: 2px;
+    
+                .title {
+                    font-size: toRem(14);
+                }
+
+                .description {
+                    font-size: toRem(12);
+                }
+
+                .fields {
+                    grid-gap: 2px;
+                }
+
+                .fields .field {
+                    .name {
+                        font-size: toRem(12);
+                    }
+
+                    .value {
+                        font-size: toRem(12);
+                    }
+                }
+
+                .footer, .author {
+                    .name {
+                        font-size: toRem(12);
+                    }
+
+                    .text {
+                        font-size: toRem(10);
+                    }
+
+                    .author_icon {
+                        @include box(18px)
+                    }
+
+                    .footer_icon {
+                        @include box(18px)
+                    }
+                }
+            }
+        }
+    }
+
+    .button {
+        padding: 4px 14px;
+    }
+}

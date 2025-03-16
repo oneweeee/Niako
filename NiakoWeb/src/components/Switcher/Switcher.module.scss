@@ -1,0 +1,57 @@
+@import '../../assets/scss/Mixins.scss';
+
+.switcher {
+    position: relative;
+    display: inline-flex;
+
+    .input {
+        display: none;
+    }
+
+    .input:checked + .slider {
+        background-color: var(--primary-color);
+    }
+
+    .disableInput:checked + .slider {
+        background-color: #6B6B6B;
+    }
+
+    .input:checked + .slider:before {
+        transform: translateX(24.5px);
+    }
+
+    .slider {
+        width: 56px;
+        height: 32px;
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        background-color: var(--component-border);
+        border-radius: 100px;
+    }
+
+    .disableSlider {
+        cursor: default;
+        background-color: #383838;
+    }
+
+    .slider::before {
+        position: absolute;
+        content: '';
+        height: 24px;
+        width: 24px;
+        top: 4px;
+        left: 4px;
+        background-color: white;
+        transition: var(--animation-time);
+        @include circle()
+    }
+
+    .disableSlider::before {
+        background-color: #6B6B6B;
+    }
+
+    .input:checked + .disableSlider::before {
+        background-color: #383838;
+    }
+}

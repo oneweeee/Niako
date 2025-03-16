@@ -1,0 +1,62 @@
+@import '../../assets/scss/Mixins.scss';
+
+.skeleton {
+    opacity: var(--animation-time);
+    animation: skeleton-loading 1s linear infinite alternate;
+    height: 24px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.skeleton-text:last-child {
+    margin-bottom: 0;
+    width: 80%;
+}
+
+.dropdown, .input {
+    @include padding-width(10px, 100%)
+}
+
+.button {
+    border-radius: 8px;
+    @include padding-width(8px, 100%)
+}
+
+.switcher {
+    height: 28px;
+    width: 58px;
+    border-radius: 100px;
+}
+
+.tabs {
+    height: 16px;
+    height: 84px;
+    width: 100%;
+}
+
+.settings {
+    height: 820px;
+    width: 100%;
+}
+
+.discord_message {
+    height: 356px;
+    width: 668px;
+    border-radius: 16px;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-color: var(--background-color);
+    }
+
+    100% {
+        background-color: var(--hover-background-color);
+    }
+}
+
+@media screen and (max-width: 1320px) {
+    .discord_message {
+        width: 100%;
+    }
+}

@@ -1,0 +1,35 @@
+@import '../../assets/scss/Mixins.scss';
+
+.download {
+    cursor: pointer;
+    min-width: 112px;
+    padding: 8px 16px;
+    align-self: stretch;
+    border-radius: 8px;
+    background: var(--component-color);
+    transition: var(--animation-time);
+    @include flex(row, center, 4px, center);
+
+    .icon {
+        fill: var(--icon-color)
+    }
+
+    .loader {
+        color: var(--icon-color)
+    }
+
+    .text {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        @include text(16, 600, var(--text-color));
+    }
+
+    .input {
+        display: none;
+    }
+}
+
+.download:hover {
+    background-color: var(--component-color-hover);
+}

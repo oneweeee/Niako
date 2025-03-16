@@ -1,0 +1,72 @@
+@import '../../assets/scss/Mixins.scss';
+
+.button {
+    cursor: pointer;
+    border-radius: 8px;
+    transition: var(--animation-time);
+    @include flex(row, center, 8px, center);
+    height: 24px;
+    overflow: hidden;
+    position: relative;
+
+    .icon {
+        fill: var(--icon-color)
+    }
+
+    .label {
+        display: -webkit-box;
+        text-align: center;
+        @include text-hidden();
+        @include text(16, 700, var(--text-color));
+        flex: none;
+    }
+
+    --bg-normal: #16191F;
+    --bg-normal-hover: #2D3035;
+    --bg-normal-active: #121419;
+
+    --bg-action-fill-hover:  #2690FA;
+    --bg-action-fill-active:  #0E6AC8;
+}
+
+.onlyIconBig { padding: 16px; }
+.onlyIconMedium { padding: 12px; }
+.onlyIconSmall { padding: 8px; }
+
+.big { padding: 16px 32px; }
+.medium { padding: 12px 28px; }
+.small { padding: 8px 24px; }
+
+
+.normalFill { background: var(--bg-normal); }
+.normalFill:hover { background: var(--bg-normal-hover); }
+.normalFill:active { background: var(--bg-normal-active); }
+
+.normalOutline { height: 22.23px; border: 1px solid var(--bg-normal); }
+.normalOutline:hover {  background: var(--bg-normal-hover); }
+.normalOutline:active {  background: var(--bg-normal-active); }
+
+.actionFill { background: var(--primary-color); }
+.actionFill:hover { background: var(--bg-action-fill-hover); }
+.actionFill:active { background: var(--bg-action-fill-active); }
+
+.loading { cursor: not-allowed;}
+
+.disabled {
+    cursor: not-allowed;
+    background: #383838;
+    &:hover { background: #383838; }
+    &:active { background: #383838; }
+    .label { color: #6B6B6B }
+    .icon { fill: #6B6B6B }
+}
+
+@keyframes loading {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background: 50% 0;
+    }
+}

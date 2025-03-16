@@ -1,0 +1,33 @@
+@import '../../assets/scss/Mixins.scss';
+
+.buttons {
+    align-self: stretch;
+    @include flex(row, flex-start, 16px, flex-start);
+
+    .button {
+        cursor: pointer;
+        border-radius: 8px;
+        background-color: var(--component-color);
+        transition: var(--animation-time);
+        flex: 1 0 0;
+        @include flex(row, center, 4px, center);;
+        @include padding-width(16px, 100%);
+        padding: 8px 16px;
+
+        .icon {
+            fill: var(--icon-color)
+        }
+    }
+
+    .button:hover {
+        background-color: var(--component-color-hover);
+    }
+
+    .currency {
+        background-color: var(--hover-background-color);
+    }
+
+    .currency:hover {
+        background-color: var(--hover-background-color);
+    }
+}

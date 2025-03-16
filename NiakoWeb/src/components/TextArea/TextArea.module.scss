@@ -1,0 +1,31 @@
+@import '../../assets/scss/Mixins.scss';
+
+.textarea {
+    background-color: var(--component-color);
+    border: 1px solid var(--component-border);
+    border-radius: 8px;
+    flex: 1 0 0;
+    transition: var(--animation-time);
+    @include padding-width(16px, 100%);
+    padding: 11px 16px;
+    @include flex(row, flex-start, 4px, flex-start);
+    @include text(16, 400, var(--placeholder-color));
+    resize: none; 
+    max-height: 256px; 
+    min-height: 88px; 
+}
+
+.textarea:focus {
+    color: var(--text-color);
+    border: 1px solid var(--primary-color);
+}
+
+.textarea:invalid:focus {
+    border: 1px solid var(--red-color);
+}
+
+.textarea::-webkit-outer-spin-button,
+.textarea::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

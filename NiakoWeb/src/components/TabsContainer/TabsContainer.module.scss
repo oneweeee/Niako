@@ -1,0 +1,95 @@
+@import '../../assets/scss/Mixins.scss';
+
+.tabs {
+    background-color: var(--block-color);
+    border-radius: 16px;
+    align-self: stretch;
+    @include padding-width(8px, 100%);
+    @include flex(row, flex-start, 8px, flex-end);
+    position: relative;
+
+    .tab {
+        cursor: pointer;
+        min-width: 110px;
+        border-radius: 8px;
+        padding: 8px;
+        flex: 1 0 0;
+        @include flex(column, center, 8px, flex-start);
+        z-index: 0;
+    }
+
+    // .activeTab { 
+    //     background: var(--hover-background-color);
+    // }
+}
+
+.content {
+    width: 100%;
+    @include flex(column, center, 8px, flex-start);
+}
+
+.icon {
+    fill: var(--icon-color)
+}
+
+.text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    align-self: stretch;
+    text-align: center;
+    text-overflow: ellipsis;
+    @include text(16, 700, var(--text-color))
+}
+
+.openTab {
+    cursor: pointer;
+    background-color: var(--block-color);
+    border-radius: 16px;
+    align-self: stretch;
+    @include padding-width(16px, 100%);
+    @include flex(row, center, 8px, flex-start);
+}
+
+.span {
+    background: var(--hover-background-color);
+    cursor: pointer;
+    min-width: 110px;
+    border-radius: 8px;
+    height: 68px;
+    width: 310px;
+    position: absolute;
+    z-index: 2;
+    transition: all .3s;
+}
+
+@media screen and (max-width:  960px) {
+    .span {
+        width: 164px;
+    }
+}
+
+@media screen and (max-width:  740px) {
+    .tabs {
+        width: 100%;
+        padding: 8px 0px;
+        @include flex(column, flex-start, 0px, flex-start);
+
+        .tab {
+            border-radius: 16px;
+            align-self: stretch;
+            @include padding-width(16px, 100%);
+            @include flex(row, center, 8px, flex-start);
+        }
+    }
+
+    .content {
+        @include flex(row, center, 8px, flex-start);
+    }
+
+    
+    .span {
+        display: none;
+    }
+}

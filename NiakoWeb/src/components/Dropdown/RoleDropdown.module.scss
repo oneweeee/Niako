@@ -1,0 +1,159 @@
+@import '../../assets/scss/Mixins.scss';
+
+.dropdown {
+    position: relative;
+    width: 100%;
+    transition: top var(--animation-time) ease-out var(--animation-time);
+    @include flex(column, center, 8px, flex-start);
+
+    .header {
+        cursor: pointer;
+        background-color: var(--component-color);
+        border-radius: 8px;
+        padding: 10px 16px;
+        align-self: stretch;
+        @include flex(row, center, 4px, flex-start);
+
+        .icon {
+            fill: var(--icon-color);
+        }
+
+        .open_icon {
+            transition: var(--animation-time);
+            animation: linear rotateOpenIcon var(--animation-time);
+            rotate: 180deg;
+        }
+
+        .close_icon {
+            transition: var(--animation-time);
+            animation: linear rotateCloseIcon var(--animation-time);
+        }
+
+        .content {
+            width: 100%;
+
+            .input {
+                padding: 0;
+                width: 100%;
+                border: none;
+                background-color: var(--component-color);
+                @include text(16, 700, var(--text-color))
+            }
+
+            .input:focus, .input:focus-visible {
+                color: var(--text-color)
+            }
+
+            .text {
+                @include text(16, 700, var(--text-color))
+            }
+
+            .placeholder {
+                @include text(16, 700, var(--text-placeholder-color))
+            }
+        }
+    }
+
+    .header:active + .placeholder {
+        display: none;
+    }
+
+    .options {
+        z-index: 1;
+        width: 100%;
+        max-height: 210px;
+        overflow-y: scroll;
+        position: absolute;
+        top: 52px;
+        scrollbar-width: thin;
+        scrollbar-color: var(--scrollbar-color) var(--component-color);
+        background-color: var(--component-color);
+        border-radius: 8px;
+        padding: 8px 0px;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-16px);
+        transition: all var(--animation-time) ease;
+        @include flex(column, flex-start, 0px, flex-start);
+        
+        .item {
+            cursor: pointer;
+            padding: 10px 16px;
+            align-self: stretch;
+            transition: var(--animation-time);
+            @include flex(row, center, 4px, flex-start);
+
+            .icon {
+                fill: var(--icon-color)
+            }
+
+            .text {
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1;                
+                @include text(16, 400, var(--text-color))
+            }
+        }
+
+        .item:hover {
+            background: var(--dropdown-hover-option);
+        }
+
+        .disabled {
+            cursor: default;
+        }
+
+        .disabled:hover {
+            background: var(--component-color);
+        }
+    }
+
+    .disabled {
+        overflow: auto;
+    }
+
+    .options::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    .options::-webkit-scrollbar-track {
+        background: var(--component-color);
+    }
+      
+    .options::-webkit-scrollbar-thumb {
+        background-color: var(--scrollbar-color);
+        border-radius: 16px;
+        border: 3px solid var(--component-color);
+        transition: var(--animation-time);
+    }      
+
+    .options::-webkit-scrollbar-thumb:hover {
+        background: var(--scrollbar-hover-color);
+    }
+
+    .open {
+        visibility: visible;
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes rotateCloseIcon {
+    from {
+        rotate: 180deg;
+    }
+
+    to {
+        rotate: 0deg;
+    }
+}
+
+@keyframes rotateOpenIcon {
+    from {
+        rotate: 0deg;
+    }
+
+    to {
+        rotate: 180deg;
+    }
+}

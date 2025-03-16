@@ -1,0 +1,50 @@
+@import '../../assets/scss/Mixins.scss';
+
+.input {
+    background-color: var(--component-color);
+    border: 1px solid var(--component-border);
+    border-radius: 8px;
+    flex: 1 0 0;
+    transition: var(--animation-time);
+    @include padding-width(16px, 100%);
+    padding: 11px 16px;
+    @include flex(row, flex-start, 4px, flex-start);
+    @include text(16, 400, var(--placeholder-color))
+}
+
+.iconStart {
+    @include padding-width(calc((24px + 40px) / 2), 100%);
+    padding: 11px 16px;
+    padding-left: 48px;
+}
+
+.input::placeholder {
+    @include text(16, 400, var(--placeholder-color))
+}
+
+.input:focus {
+    color: var(--text-color);
+    border: 1px solid var(--primary-color);
+}
+
+.input:invalid:focus {
+    border: 1px solid var(--red-color);
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.left {
+    text-align: left;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}

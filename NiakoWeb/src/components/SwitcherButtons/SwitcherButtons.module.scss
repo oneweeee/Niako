@@ -1,0 +1,39 @@
+@import '../../assets/scss/Mixins.scss';
+
+.buttons {
+    background-color: var(--background-component-color);
+    border-radius: 8px;
+    align-content: flex-start;
+    align-self: stretch;
+    @include flex(row, flex-start, 0px, flex-start);
+
+    .button {
+        cursor: pointer;
+        min-width: 112px;
+        background-color: var(--background-component-color);
+        border-radius: 8px;
+        padding: 8px 16px;
+        flex: 1 0 0;
+        @include flex(row, center, 4px, center);
+
+        .icon {
+            fill: var(--text-group-color)
+        }
+
+        .text {
+            @include text(16, 600, var(--text-group-color))
+        }
+    }
+
+    .buttonCurrency {
+        background-color: var(--component-color);
+
+        .icon {
+            fill: var(--icon-color)
+        }
+
+        .text {
+            @include text(16, 600, var(--text-color))
+        }
+    }
+}
